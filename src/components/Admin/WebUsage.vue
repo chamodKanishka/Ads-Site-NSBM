@@ -69,8 +69,8 @@
                                 <span data-feather="calendar"></span>
                                 All Time
                                 <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                    <a class="dropdown-item" href="#">Last Week</a>
                                     <a class="dropdown-item" href="#">Last Month</a>
-                                    <a class="dropdown-item" href="#">Last Year</a>
                                 </div>
                             </button>
                         </div>

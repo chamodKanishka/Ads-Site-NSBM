@@ -26,6 +26,7 @@ import NavHeader from "../components/NavHeader";
 import AdsPayments from "../components/Admin/AdsPayments";
 import WebUsage from "../components/Admin/WebUsage";
 import Profile from "../components/Profile";
+import MyAds from "../components/Hostel/MyAds";
 
 
 Vue.use(VueSwal)
@@ -79,6 +80,11 @@ export default new Router({
             path: "/Hostel/HostelHome",
             name: "HostelHome",
             component: HostelHome
+        },
+        {
+            path: "/Hostel/MyAds",
+            name: "MyAds",
+            component: MyAds
         },
         {
             path: "/Faculty/FacultyHome",

@@ -3,8 +3,8 @@
         <div class="top-bar">
             <div class="top-bar-left">
                 <ul class="menu">
-                    <li class="menu-text"><img src="http://placehold.it/75x30" alt="logo"></li>
-                    <li><router-link to="/Hostel/HostelHome">Home</router-link></li>
+                    <li class="menu-text"><div class="logo"><img src="../images/logo.png" alt="logo"></div></li>
+                    <li><router-link to="/Hostel/MyAds">Home</router-link></li>
                     <li><router-link to="/Faculty/FacultyHome">Contacts</router-link></li>
                     <li><router-link to="/Canteen/CanteenHome">About</router-link></li>
                 </ul>
@@ -33,6 +33,10 @@
         color: #fefefe;
     }
 
+    .logo{
+        height: 30px;
+        width: 140px;
+    }
     .hero-full-screen .top-bar .menu li {
         display: -webkit-flex;
         display: -ms-flexbox;

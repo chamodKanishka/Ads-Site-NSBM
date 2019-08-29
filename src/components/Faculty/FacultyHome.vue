@@ -10,7 +10,7 @@
                         <li><router-link to="/Faculty/FacultyHome"  class="active">Home</router-link></li>
                         <li><router-link to="/Faculty/NoticeAdd">Add Notice</router-link></li>
                         <li><router-link to="/Faculty/EventsAdd">Add Event</router-link></li>
-                        <li><router-link to="/Contact">Contact</router-link></li>
+                        <li><router-link to="/Faculty/Contact">Contact</router-link></li>
                         <li><router-link to="/About">About</router-link></li>
                         <li><router-link to="/Profile">Profile</router-link></li>
                         <li>

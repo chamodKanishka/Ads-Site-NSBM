@@ -7,12 +7,9 @@
             <div id="topbar-responsive" class="topbar-responsive-links">
                 <div class="top-bar-right">
                     <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Hostel/HostelHome">Home</router-link></li>
+                        <li><router-link to="/Hostel/MyAds">Home</router-link></li>
                         <li><router-link to="/Hostel/Hostels" class="active">View Adds</router-link></li>
                         <li><router-link to="/Hostel/AddHostel">Post add</router-link></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Profile</a></li>
                         <li>
                             <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
                         </li>

@@ -20,13 +20,130 @@
                 </div>
             </div>
         </nav>
-        <h1>#EventsAdd</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Add new event</h2>
+                <p class="lead">Enter every detail in correct. we don't get responsibility of your fault</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 order-md-1">
+                    <h4 class="mb-3">Event Details</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="Location">Event title</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="location" placeholder="Title" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Title is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Contact">Contact Number</label>
+                            <input type="number" class="form-control" id="Contact" placeholder="Contact Number"><div class="invalid-feedback">
+                            Please enter your contact no
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 mb-3">
+                                <label for="country">Type of Hostel</label>
+                                <select class="custom-select d-block w-100" id="country" required>
+                                    <option value="">Choose...</option>
+                                    <option>Apartment</option>
+                                    <option>House</option>
+                                    <option>Floor</option>
+                                    <option>Room</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select any of choice
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">For</label>
+                                <select class="custom-select d-block w-100" id="state" required>
+                                    <option value="">Choose...</option>
+                                    <option>Boys</option>
+                                    <option>Girls</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select one of them
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="zip">Count</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Count is required.
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="mb-3">Images</h5>
+                        <div id="my-strictly-unique-vue-upload-multiple-image" style="display: flex; justify-content: center;">
+                            <vue-upload-multiple-image
+                                    @upload-success="uploadImageSuccess"
+                                    @before-remove="beforeRemove"
+                                    @edit-image="editImage"
+                                    @data-change="dataChange"
+                                    :data-images="images"
+                            ></vue-upload-multiple-image>
+                        </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Publish</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+
     </div>
 </template>
 
 <script>
+    import VueUploadMultipleImage from 'vue-upload-multiple-image'
     export default {
-        name: "EventsAdd"
+        name: "EventsAdd",
+        data () {
+            return {
+                images: []
+            }
+        },
+        components: {
+            VueUploadMultipleImage
+        },
+        methods: {
+            uploadImageSuccess(formData, index, fileList) {
+                console.log('data', formData, index, fileList)
+                // Upload image api
+                // axios.post('http://your-url-upload', { data: formData }).then(response => {
+                //   console.log(response)
+                // })
+            },
+            beforeRemove(index, done, fileList) {
+                console.log('index', index, fileList)
+                var r = confirm("remove image")
+                if (r == true) {
+                    done()
+                } else {
+                }
+            },
+            editImage(formData, index, fileList) {
+                console.log('edit data', formData, index, fileList)
+            },
+            dataChange(data) {
+                console.log(data)
+            }
+        }
     }
 </script>
 

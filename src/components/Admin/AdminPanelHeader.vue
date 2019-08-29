@@ -37,9 +37,7 @@
     .main{
         margin-top: -60px;
     }
-
     .topbar-responsive {
-        background: #2c3840;
         padding: 1rem 1.5rem;
         overflow-y: hidden;
     }
@@ -207,7 +205,7 @@
         -webkit-justify-content: space-between;
         -ms-flex-pack: center;
         justify-content: space-between;
-        background: #2c3840;
+        /*background: #2c3840;*/
         height: 55px;
         width: 100%;
         -webkit-flex: 0 0 55px;

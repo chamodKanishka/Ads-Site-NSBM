@@ -15,10 +15,10 @@
                         </div>
 
                         <ul class="contact-us-list">
-                            <li class="address">100 W Rincon Ave, Campbell CA 95008</li>
+                            <li class="address">NSBM Green University Town  ,<br>    Mahenwaththa,Pitipana, Homagama</li>
                             <li class="email"><a href="mailto:">adds@nsbm.lk</a></li>
                             <li class="phone">
-                                1 (408) 445 9978
+                                (011) 2 544 5000
                             </li>
                         </ul>
 

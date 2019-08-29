@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-md-4 left">
+        <div class="col-md-4.5 left">
             <NavHeader/>
         </div>
         <div class="col-md-4 forms">
