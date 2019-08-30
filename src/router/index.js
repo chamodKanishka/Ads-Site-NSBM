@@ -27,6 +27,7 @@ import AdsPayments from "../components/Admin/AdsPayments";
 import WebUsage from "../components/Admin/WebUsage";
 import Profile from "../components/Profile";
 import MyAds from "../components/Hostel/MyAds";
+import Footer from "../components/Footer";
 
 
 Vue.use(VueSwal)
@@ -160,6 +161,11 @@ export default new Router({
             path: "/Profile",
             name: "Profile",
             component: Profile
+        },
+        {
+            path: "/Footer",
+            name: "Footer",
+            component: Footer
         },
     ]
 })

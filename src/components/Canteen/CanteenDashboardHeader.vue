@@ -11,9 +11,6 @@
                         <li><router-link to="/Canteen/CanteenProducts">View Adds</router-link></li>
                         <li><router-link to="/Canteen/CanteenAdds">Post add</router-link></li>
                         <li><router-link to="/Canteen/CanteenDashboard"   class="active">Dashboard</router-link></li>
-                        <li><router-link to="/Contact">Contact</router-link></li>
-                        <li><router-link to="/About">About</router-link></li>
-                        <li><router-link to="/Profile">Profile</router-link></li>
                         <li>
                             <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
                         </li>

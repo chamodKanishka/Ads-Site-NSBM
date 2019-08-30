@@ -10,9 +10,6 @@
                         <li><router-link to="/Faculty/FacultyHome">Home</router-link></li>
                         <li><router-link to="/Faculty/NoticeAdd" class="active">Add Notice</router-link></li>
                         <li><router-link to="/Faculty/EventsAdd">Add Event</router-link></li>
-                        <li><router-link to="/Contact">Contact</router-link></li>
-                        <li><router-link to="/About">About</router-link></li>
-                        <li><a href="#">Profile</a></li>
                         <li>
                             <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
                         </li>
@@ -21,12 +18,15 @@
             </div>
         </nav>
         <h1>#NoticeAdd</h1>
+        <Footer/>
     </div>
 </template>
 
 <script>
+    import Footer from "../Footer";
     export default {
-        name: "NoticeAdd"
+        name: "NoticeAdd",
+        components: {Footer}
     }
 </script>
 

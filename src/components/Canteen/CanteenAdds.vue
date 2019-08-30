@@ -11,9 +11,6 @@
                         <li><router-link to="/Canteen/CanteenProducts">View Adds</router-link></li>
                         <li><router-link to="/Canteen/CanteenAdds"  class="active">Post add</router-link></li>
                         <li><router-link to="/Canteen/CanteenDashboard">Dashboard</router-link></li>
-                        <li><router-link to="/Contact">Contact</router-link></li>
-                        <li><router-link to="/About">About</router-link></li>
-                        <li><a href="#">Profile</a></li>
                         <li>
                             <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
                         </li>
@@ -105,21 +102,17 @@
                     </form>
                 </div>
             </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
 
-<!--            <footer class="my-5 pt-5 text-muted text-center text-small">-->
-<!--                <p class="mb-1">&copy; 2017-2019 Company Name</p>-->
-<!--                <ul class="list-inline">-->
-<!--                    <li class="list-inline-item"><a href="#">Privacy</a></li>-->
-<!--                    <li class="list-inline-item"><a href="#">Terms</a></li>-->
-<!--                    <li class="list-inline-item"><a href="#">Support</a></li>-->
-<!--                </ul>-->
-<!--            </footer>-->
+            </footer>
         </div>
+        <Footer/>
     </div>
 </template>
 
 <script>
     import VueUploadMultipleImage from 'vue-upload-multiple-image'
+    import Footer from "../Footer";
     export default {
         name: "CanteenAdds",
         data () {
@@ -128,6 +121,7 @@
             }
         },
         components: {
+            Footer,
             VueUploadMultipleImage
         },
         methods: {

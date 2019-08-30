@@ -10,9 +10,6 @@
                         <li><router-link to="/Faculty/FacultyHome" >Home</router-link></li>
                         <li><router-link to="/Faculty/NoticeAdd">Add Notice</router-link></li>
                         <li><router-link to="/Faculty/EventsAdd"  class="active">Add Event</router-link></li>
-                        <li><router-link to="/Contact">Contact</router-link></li>
-                        <li><router-link to="/About">About</router-link></li>
-                        <li><a href="#">Profile</a></li>
                         <li>
                             <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
                         </li>
@@ -104,13 +101,17 @@
                     </form>
                 </div>
             </div>
-    </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
 
+            </footer>
+    </div>
+<Footer/>
     </div>
 </template>
 
 <script>
     import VueUploadMultipleImage from 'vue-upload-multiple-image'
+    import Footer from "../Footer";
     export default {
         name: "EventsAdd",
         data () {
@@ -119,6 +120,7 @@
             }
         },
         components: {
+            Footer,
             VueUploadMultipleImage
         },
         methods: {

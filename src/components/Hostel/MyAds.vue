@@ -38,14 +38,16 @@
             </div>
         </div>
     </div>
+        <Footer/>
     </div>
 </template>
 
 <script>
     import HostelHome from "./HostelHome";
+    import Footer from "../Footer";
     export default {
         name: "MyAds",
-        components: {HostelHome}
+        components: {Footer, HostelHome}
     }
 </script>
 

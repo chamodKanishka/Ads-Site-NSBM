@@ -11,9 +11,6 @@
                         <li><router-link to="/Canteen/CanteenProducts">View Adds</router-link></li>
                         <li><router-link to="/Canteen/CanteenAdds">Post add</router-link></li>
                         <li><router-link to="/Canteen/CanteenDashboard">Dashboard</router-link></li>
-                        <li><router-link to="/Contact">Contact</router-link></li>
-                        <li><router-link to="/About">About</router-link></li>
-                        <li><a href="#">Profile</a></li>
                         <li>
                             <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
                         </li>
@@ -37,8 +34,8 @@
                     </div>
                     <div class="app-dashboard-sidebar-inner">
                         <ul class="menu vertical">
-                            <li><router-link to="/Admin/RegisteredAccounts">
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">My Ads</span>
+                            <li><router-link to="/Admin/RegisteredAccounts"  class="active">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Adds List</span>
                             </router-link></li>
                             <li><router-link to="/Admin/RegisterRequest" >
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
@@ -46,7 +43,7 @@
                             <li><router-link to="/Admin/AdsPayments">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
                             </router-link></li>
-                            <li><router-link to="/Admin/UsersFeedback" class="active">
+                            <li><router-link to="/Admin/UsersFeedback">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">About us</span>
                             </router-link></li>
                         </ul>
@@ -58,12 +55,15 @@
                 </div>
             </div>
         </div>
+        <Footer/>
     </div>
 </template>
 
 <script>
+    import Footer from "../Footer";
     export default {
-        name: "CanteenHome"
+        name: "CanteenHome",
+        components: {Footer}
     }
 </script>
 
@@ -214,7 +214,6 @@
 
 
 
-
     .app-dashboard {
         height: 87vh;
         display: -webkit-flex;
@@ -235,22 +234,30 @@
     }
 
     .app-dashboard-sidebar {
-        background-color: #fefefe;
+        /*background-color: #fefefe;*/
         height: 100%;
-        overflow-x: visible;
-        overflow-y: auto;
+        /*overflow-x: visible;*/
+        /*overflow-y: auto;*/
         z-index: 1;
         transition: all 0.5s ease;
     }
 
     .app-dashboard-sidebar .app-dashboard-sidebar-inner {
-        height: 100%;
+        /*height: 100%;*/
         overflow-x: hidden;
         overflow-y: auto;
     }
 
     .reveal-for-medium .app-dashboard-open-sidebar {
         display: none;
+    }
+
+    .active{
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    li span{
+        font-size: larger;
     }
 
 </style>

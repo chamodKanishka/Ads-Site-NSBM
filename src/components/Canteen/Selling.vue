@@ -57,14 +57,16 @@
                         </div>
                     </div>
                 </div>
+        <Footer/>
             </div>
 </template>
 
 <script>
     import CanteenDashboardHeader from "./CanteenDashboardHeader";
+    import Footer from "../Footer";
     export default {
         name: "Selling",
-        components: {CanteenDashboardHeader},
+        components: {Footer, CanteenDashboardHeader},
     }
 </script>
 
