@@ -17,169 +17,54 @@
                 </div>
             </div>
         </nav>
-        <h1>#HostelList</h1>
-        <div>
-            <vue-nice-scrollbar classes="my-scrollbar" v-bind:speed=100 theme="light">
-                <div class="scroll-me">
-                    #Scroll__Content
-
-                </div>
-            </vue-nice-scrollbar>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-            A vuejs grid with draggable and resizable boxes
-
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            Apr 27, 2018 - Click to show input text box Vue Component ... inspired by Trello. This is my first time publishing Vue Component via npm package and let me .
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            #Scroll__Content
-            A vuejs grid with draggable and resizable boxes
-
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            Apr 27, 2018 - Click to show input text box Vue Component ... inspired by Trello. This is my first time publishing Vue Component via npm package and let me .
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            A vuejs grid with draggable and resizable boxes
-
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            Apr 27, 2018 - Click to show input text box Vue Component ... inspired by Trello. This is my first time publishing Vue Component via npm package and let me .
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            #Scroll__Content
-            A vuejs grid with draggable and resizable boxes
-
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-            Apr 27, 2018 - Click to show input text box Vue Component ... inspired by Trello. This is my first time publishing Vue Component via npm package and let me .
-            https://vuejsexamples.com › a-vuejs-grid-with-draggable-and-resizable-bo...
-            Aug 24, 2017 - A vuejs grid with draggable and resizable boxes. The demo requires Vue >= 2.3.0 because of the ":layout.sync" feature. The components ...
-            A prettier way to display select boxes
-
-            https://vuejsexamples.com › a-prettier-way-to-display-select-boxes
-            Jan 24, 2018 - vue-dropdowns. A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects. No special dependencies, no ...
-            Surf & Paddle & Boxes - Vue.js Examples
-
-            https://vuejsexamples.com › surf-paddle-boxes
-            Sep 23, 2016 - 23 September 2016. Memory card game with VueJS. Memory card game with VueJS BY Icebob codepen demo See the Pen Memory card ...
-            A lightweight set of functional grid components
-
-            https://vuejsexamples.com › a-lightweight-set-of-functional-grid-components
-            May 15, 2018 - import VueGridStyled from "vue-grid-styled"; // OR import { Box, Flex } from "vue-grid-styled"; // OPTIONAL: Pass a custom theme const theme ...
-            Click to show input text box Vue Component - Vue.js Examples
-
-            https://vuejsexamples.com › click-to-show-input-text-box-vue-component
-                </div>
+        <div class="row">
+        <div class="col-md-2"></div>
+            <div class="scroll-me col-md-8">
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
+                <div class="kolom"></div>
             </div>
+        <div class="col-md-2"></div>
+        </div>
+        <div>
+
             <div class="pagination">
                 <p>Current page: {{ currentPage }}</p>
                 <v-pagination v-model="currentPage"
@@ -202,7 +87,7 @@
     import Footer from "../Footer";
     export default {
         name: "Hostels",
-        components: {Footer, vPagination },
+        components: {Footer, vPagination,vueNiceScrollbar },
         data() {
             return {
                 currentPage: 1,
@@ -383,6 +268,43 @@
     }
     .pagination{
         align-content: center;
+    }
+
+
+
+    /*h1 {*/
+    /*    text-align: center;*/
+    /*}*/
+
+    .title {
+        margin: 20px 0;
+    }
+
+    .side {
+        position: relative;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+    }
+    .my-scrollbar {
+        width: 35%;
+        min-width: 300px;
+        max-height: 450px;
+    }
+
+    .scroll-me{
+        /*min-width: 500px;*/
+        background: #eee;
+        /*overflow: hidden;*/
+    }
+
+    .kolom {
+        background: #2196f3;
+        width: 200px;
+        height: 200px;
+        float: left;
+        display: inline-block;
+        margin: 11px;
     }
 
 </style>

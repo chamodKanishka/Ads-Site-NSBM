@@ -6,7 +6,6 @@
                 <h1>Add your advertisement here</h1>
                 <router-link to="/Login"><button class="button large">Login</button></router-link>
                 <router-link to="/Register"><button class="button large">Register</button></router-link>
-
             </div>
 
             <div class="bottom-content-section" data-magellan data-threshold="0">

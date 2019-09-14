@@ -17,6 +17,7 @@
     "foundation": "^4.2.1-1",
     "foundation-sites": "^6.5.3",
     "hljs": "^6.2.3",
+    "hooper": "^0.3.4",
     "install": "^0.13.0",
     "jquery": "^3.4.1",
     "less-loader": "^5.0.0",
@@ -34,7 +35,10 @@
     "vue-avatar-editor-improved": "^1.0.4",
     "vue-dynamic-dropdown": "^1.0.11",
     "vue-form": "^4.10.1",
+    "vue-form-wizard": "^0.8.4",
     "vue-js-modal": "^1.3.31",
+    "vue-loading-overlay": "^3.2.0",
+    "vue-material-checkbox": "^2.1.0",
     "vue-nice-scrollbar": "^2.0.1",
     "vue-plain-pagination": "^0.3.0",
     "vue-products-grid": "^0.1.3",
@@ -43,7 +47,9 @@
     "vue-stepper": "^1.4.2",
     "vue-stores": "^1.0.3",
     "vue-swal": "^1.0.0",
+    "vue-top-progress": "^0.7.0",
     "vue-upload-multiple-image": "^1.1.4",
+    "vuelidate": "^0.7.4",
     "vuex": "^3.1.1",
     "vuex-map-fields": "^1.3.5",
     "what-input": "^5.2.3"
@@ -55,6 +61,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "vue-sticker": "^1.1.11",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

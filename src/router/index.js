@@ -28,6 +28,12 @@ import WebUsage from "../components/Admin/WebUsage";
 import Profile from "../components/Profile";
 import MyAds from "../components/Hostel/MyAds";
 import Footer from "../components/Footer";
+import Notices from "../components/Faculty/Notices";
+import Events from "../components/Faculty/Events";
+import NewOrders from "../components/Canteen/NewOrders";
+import CompleteOrders from "../components/Canteen/CompleteOrders";
+import UnPayedIems from "../components/Canteen/UnPayedIems";
+import Feedback from "../components/Canteen/Feedback";
 
 
 Vue.use(VueSwal)
@@ -103,6 +109,16 @@ export default new Router({
             component: EventsAdd
         },
         {
+            path: "/Faculty/Notices",
+            name: "Notices",
+            component: Notices
+        },
+        {
+            path: "/Faculty/Events",
+            name: "Events",
+            component: Events
+        },
+        {
             path: "/Canteen/CanteenHome",
             name: "CanteenHome",
             component: CanteenHome
@@ -126,6 +142,26 @@ export default new Router({
             path: "/Canteen/CanteenAdds",
             name: "CanteenAdds",
             component: CanteenAdds
+        },
+        {
+            path: "/Canteen/NewOrders",
+            name: "NewOrders",
+            component: NewOrders
+        },
+        {
+            path: "/Canteen/CompleteOrders",
+            name: "CompleteOrders",
+            component: CompleteOrders
+        },
+        {
+            path: "/Canteen/UnPayedItems",
+            name: "UnPayedItems",
+            component: UnPayedIems
+        },
+        {
+            path: "/Canteen/Feedback",
+            name: "Feedback",
+            component: Feedback
         },
         {
             path: "/Admin/AdminPanelHeader",

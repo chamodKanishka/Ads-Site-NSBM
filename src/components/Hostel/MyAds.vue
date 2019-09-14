@@ -20,13 +20,13 @@
                         <li><router-link to="/Hostel/MyAds" class="active">
                             <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">My Ads</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/RegisterRequest" >
+                        <li><router-link to="/Contact" >
                             <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/AdsPayments">
+                        <li><router-link to="/Contact">
                             <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/UsersFeedback" >
+                        <li><router-link to="/About" >
                             <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">About us</span>
                         </router-link></li>
                     </ul>
@@ -34,6 +34,27 @@
             </div>
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                 <h1>#Content__Section</h1>
+                <hooper :settings="hooperSettings">
+                    <slide>
+                        slide 1
+                    </slide>
+                    <slide>
+                        slide 2
+                    </slide>
+                    <slide>
+                        slide 3
+                    </slide>
+                    <slide>
+                        slide 4
+                    </slide>
+                    <slide>
+                        slide 5
+                    </slide>
+                    <slide>
+                        slide 6
+                    </slide>
+                    ...
+                </hooper>
 
             </div>
         </div>
@@ -45,9 +66,19 @@
 <script>
     import HostelHome from "./HostelHome";
     import Footer from "../Footer";
+    import { Hooper, Slide } from 'hooper';
+    import 'hooper/dist/hooper.css';
     export default {
         name: "MyAds",
-        components: {Footer, HostelHome}
+        components: {Footer, HostelHome, Hooper, Slide},
+        data() {
+            return {
+                hooperSettings: {
+                    itemsToShow: 2,
+                    centerMode: true
+                }
+            };
+        }
     }
 </script>
 
