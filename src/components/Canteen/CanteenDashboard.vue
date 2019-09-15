@@ -17,18 +17,18 @@
                     </div>
                     <div class="app-dashboard-sidebar-inner">
                         <ul class="menu vertical">
-                            <li><router-link to="/Canteen/NewOrders">
+                            <li><router-link to="/Canteen/CanteenDashboard">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">New Orders</span>
                             </router-link></li>
-                            <li><router-link to="/Canteen/CompleteOrders">
+                            <li><a>
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Completed Orders</span>
-                            </router-link></li>
-                            <li><router-link to="/Canteen/UnPayedItems">
+                            </a></li>
+                            <li><a>
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Un-Payed Items</span>
-                            </router-link></li>
-                            <li><router-link to="/Canteen/Feedback">
+                            </a></li>
+                            <li><a href="#" class="is-active">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Customer Feedbacks</span>
-                            </router-link></li>
+                            </a></li>
                             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                                 <span>Selling reports</span>
                                 <a class="d-flex align-items-center text-muted" href="#">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Dashboard</h1>
+                        <h1 class="h2">New Orders</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <div class="btn-group mr-2">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
