@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FacultyHome/>
+        <CanteenHome/>
         <div class="app-dashboard shrink-medium">
             <div class="app-dashboard-body off-canvas-wrapper">
                 <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium" data-off-canvas>
@@ -17,11 +17,8 @@
                     </div>
                     <div class="app-dashboard-sidebar-inner">
                         <ul class="menu vertical">
-                            <li><router-link to="/Faculty/Events" >
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Events</span>
-                            </router-link></li>
-                            <li><router-link to="/Faculty/Notices" class="active">
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
+                            <li><router-link to="/Admin/RegisteredAccounts"  class="active">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Adds List</span>
                             </router-link></li>
                             <li><router-link to="/Admin/RegisterRequest" >
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
@@ -29,43 +26,37 @@
                             <li><router-link to="/Admin/AdsPayments">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
                             </router-link></li>
-                            <li><router-link to="/Admin/UsersFeedback" >
+                            <li><router-link to="/Admin/UsersFeedback">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">About us</span>
                             </router-link></li>
                         </ul>
                     </div>
                 </div>
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                    <h1>#Notices__Section</h1>
+                    <h1>#Content__Section</h1>
 
                 </div>
             </div>
         </div>
-        <Footer/>
+    <Footer/>
     </div>
 </template>
 
 <script>
-    import FacultyHome from "./FacultyNavbar";
+    import CanteenHome from "./CanteenNavbar";
     import Footer from "../Footer";
     export default {
-        name: "Notices",
-        components: {Footer, FacultyHome}
+        name: "AddsList",
+        components: {Footer, CanteenHome}
     }
 </script>
 
 <style scoped>
-
-    b{
-        color: #fefefe;
-        margin-left: 20px;
-        font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 24px;
-    }
     .active{
         font-weight: bolder;
         text-decoration: none;
     }
+
 
 
     .app-dashboard {

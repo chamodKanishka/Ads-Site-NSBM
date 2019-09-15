@@ -6,7 +6,7 @@
                     <li class="menu-text"><div class="logo"><img src="../images/logo.png" alt="logo"></div></li>
                     <li><router-link to="/Hostel/MyAds">Home</router-link></li>
                     <li><router-link to="/Faculty/Events">Contacts</router-link></li>
-                    <li><router-link to="/Canteen/CanteenHome">About</router-link></li>
+                    <li><router-link to="/Canteen/AddsList">About</router-link></li>
                 </ul>
             </div>
         </div>

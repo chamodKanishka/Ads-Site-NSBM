@@ -9,7 +9,7 @@ import AddHostel from '../components/Hostel/AddHostel'
 import HostelHome from '../components/Hostel/HostelHome'
 import Hostels from '../components/Hostel/Hostels'
 import FacultyHome from '../components/Faculty/FacultyNavbar'
-import CanteenHome from '../components/Canteen/CanteenHome'
+import CanteenHome from '../components/Canteen/CanteenNavbar'
 import CanteenDashboard from '../components/Canteen/CanteenDashboard'
 import Selling from "../components/Canteen/Selling";
 import CanteenProducts from "../components/Canteen/CanteenProducts";
@@ -34,6 +34,7 @@ import NewOrders from "../components/Canteen/NewOrders";
 import CompleteOrders from "../components/Canteen/CompleteOrders";
 import UnPayedIems from "../components/Canteen/UnPayedIems";
 import Feedback from "../components/Canteen/Feedback";
+import AddsList from "../components/Canteen/AddsList";
 
 
 Vue.use(VueSwal)
@@ -122,6 +123,11 @@ export default new Router({
             path: "/Canteen/CanteenHome",
             name: "CanteenHome",
             component: CanteenHome
+        },
+        {
+            path: "/Canteen/AddsList",
+            name: "AddsList",
+            component: AddsList
         },
         {
             path: "/Canteen/CanteenDashboard",

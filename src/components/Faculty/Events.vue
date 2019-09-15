@@ -17,10 +17,10 @@
                 </div>
                 <div class="app-dashboard-sidebar-inner">
                     <ul class="menu vertical">
-                        <li><router-link to="/Hostel/MyAds" class="active">
+                        <li><router-link to="/Faculty/Events" class="active">
                             <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Events</span>
                         </router-link></li>
-                        <li><router-link to="/Faculty/Timeline">
+                        <li><router-link to="/Faculty/Notices">
                             <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
                         </router-link></li>
                         <li><router-link to="/Admin/RegisterRequest" >
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                <h1>#Content__Section</h1>
+                <h1>#Events__Section</h1>
 
             </div>
         </div>

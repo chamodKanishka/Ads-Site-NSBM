@@ -17,18 +17,18 @@
                     </div>
                     <div class="app-dashboard-sidebar-inner">
                         <ul class="menu vertical">
-                            <li><router-link to="/Canteen/CanteenDashboard">
+                            <li><router-link to="/Canteen/NewOrders">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">New Orders</span>
                             </router-link></li>
-                            <li><a>
+                            <li><router-link to="/Canteen/CompleteOrders">
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Completed Orders</span>
-                            </a></li>
-                            <li><a>
+                            </router-link></li>
+                            <li><router-link to="/Canteen/UnPayedItems">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Un-Payed Items</span>
-                            </a></li>
-                            <li><a href="#" class="is-active">
+                            </router-link></li>
+                            <li><router-link to="/Canteen/Feedback">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Customer Feedbacks</span>
-                            </a></li>
+                            </router-link></li>
                             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                                 <span>Selling reports</span>
                                 <a class="d-flex align-items-center text-muted" href="#">
