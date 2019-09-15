@@ -8,7 +8,7 @@ import About from '../components/About'
 import AddHostel from '../components/Hostel/AddHostel'
 import HostelHome from '../components/Hostel/HostelHome'
 import Hostels from '../components/Hostel/Hostels'
-import FacultyHome from '../components/Faculty/FacultyHome'
+import FacultyHome from '../components/Faculty/FacultyNavbar'
 import CanteenHome from '../components/Canteen/CanteenHome'
 import CanteenDashboard from '../components/Canteen/CanteenDashboard'
 import Selling from "../components/Canteen/Selling";

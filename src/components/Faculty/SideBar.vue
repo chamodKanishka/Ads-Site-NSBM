@@ -42,7 +42,7 @@
 </template>
 
 <script>
-    import FacultyHome from "./FacultyHome";
+    import FacultyHome from "./FacultyNavbar";
     export default {
         name: "SideBar",
         components: {FacultyHome}
