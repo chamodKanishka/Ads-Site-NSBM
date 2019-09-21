@@ -17,7 +17,77 @@
                 </div>
             </div>
         </nav>
-        <h1>#NoticeAdd</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Add a Notice</h2>
+                <p class="lead">Enter every detail in correct. we don't get responsibility of your fault</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 order-md-1">
+                    <h4 class="mb-3">Notice Details</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="Location">Notice Title</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="location" placeholder="Title" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Title is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mb-3">Description</h4>
+                        <div class="md-3">
+                        <textarea placeholder="Enter Notice"
+                                  rows="20" name="comment[text]"
+                                  id="comment_text" cols="40"
+                                  class="ui-autocomplete-input"
+                                  autocomplete="off" role="textbox"
+                                  aria-autocomplete="list"
+                                  aria-haspopup="true"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 mb-3">
+                                <label for="country">Batch</label>
+                                <select class="custom-select d-block w-100" id="country" required>
+                                    <option value="">All</option>
+                                    <option>19.1</option>
+                                    <option>18.2</option>
+                                    <option>18.1</option>
+                                    <option>17.2</option>
+                                    <option>17.1</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select any of choice
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">Faculty</label>
+                                <select class="custom-select d-block w-100" id="state" required>
+                                    <option value="">All</option>
+                                    <option>Business</option>
+                                    <option>Computing</option>
+                                    <option>Engineering</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select one of them
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Publish Notice</button>
+                    </form>
+                </div>
+            </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+
+            </footer>
+
+    </div>
         <Footer/>
     </div>
 </template>

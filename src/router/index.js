@@ -9,13 +9,8 @@ import AddHostel from '../components/Hostel/AddHostel'
 import HostelHome from '../components/Hostel/HostelHome'
 import Hostels from '../components/Hostel/Hostels'
 import FacultyHome from '../components/Faculty/FacultyNavbar'
-import CanteenHome from '../components/Canteen/CanteenNavbar'
-import CanteenDashboard from '../components/Canteen/CanteenDashboard'
-import Selling from "../components/Canteen/Selling";
-import CanteenProducts from "../components/Canteen/CanteenProducts";
 import Model from 'vue-js-modal'
 import VueSwal from 'vue-swal'
-import CanteenAdds from "../components/Canteen/CanteenAdds";
 import NoticeAdd from "../components/Faculty/NoticeAdd";
 import EventsAdd from "../components/Faculty/EventsAdd";
 import AdminPanelHeader from "../components/Admin/AdminPanelHeader";
@@ -30,10 +25,6 @@ import MyAds from "../components/Hostel/MyAds";
 import Footer from "../components/Footer";
 import Notices from "../components/Faculty/Notices";
 import Events from "../components/Faculty/Events";
-import CompleteOrders from "../components/Canteen/CompleteOrders";
-import UnPayedIems from "../components/Canteen/UnPayedIems";
-import Feedback from "../components/Canteen/Feedback";
-import AddsList from "../components/Canteen/AddsList";
 
 
 Vue.use(VueSwal)
@@ -117,51 +108,6 @@ export default new Router({
             path: "/Faculty/Events",
             name: "Events",
             component: Events
-        },
-        {
-            path: "/Canteen/CanteenHome",
-            name: "CanteenHome",
-            component: CanteenHome
-        },
-        {
-            path: "/Canteen/AddsList",
-            name: "AddsList",
-            component: AddsList
-        },
-        {
-            path: "/Canteen/CanteenDashboard",
-            name: "CanteenDashboard",
-            component: CanteenDashboard
-        },
-        {
-            path: "/Canteen/Selling",
-            name: "Selling",
-            component: Selling
-        },
-        {
-            path: "/Canteen/CanteenProducts",
-            name: "CanteenProducts",
-            component: CanteenProducts
-        },
-        {
-            path: "/Canteen/CanteenAdds",
-            name: "CanteenAdds",
-            component: CanteenAdds
-        },
-        {
-            path: "/Canteen/CompleteOrders",
-            name: "CompleteOrders",
-            component: CompleteOrders
-        },
-        {
-            path: "/Canteen/UnPayedItems",
-            name: "UnPayedItems",
-            component: UnPayedIems
-        },
-        {
-            path: "/Canteen/Feedback",
-            name: "Feedback",
-            component: Feedback
         },
         {
             path: "/Admin/AdminPanelHeader",

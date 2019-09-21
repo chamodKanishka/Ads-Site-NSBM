@@ -3,9 +3,10 @@
         <div class="hero-full-screen fixed-top">
             <NavHeader/>
             <div class="middle-content-section">
-                <h1>Add your advertisement here</h1>
+                <h1>Welcome to NSBM Add Site</h1>
                 <router-link to="/Login"><button class="button large">Login</button></router-link>
                 <router-link to="/Register"><button class="button large">Register</button></router-link>
+                <router-link to="/Hostel/Hostels"><button class="button large"><i class="fa fa-users"></i>Visitors</button></router-link>
             </div>
 
             <div class="bottom-content-section" data-magellan data-threshold="0">
@@ -78,6 +79,46 @@
         fill: #fefefe;
     }
 
+
+    .dashboard-nav-card {
+        background: #1779ba;
+        border-radius: 0;
+        color: #fefefe;
+        display: block;
+        min-height: 100px;
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .dashboard-nav-card:hover .dashboard-nav-card-title,
+    .dashboard-nav-card:hover .dashboard-nav-card-icon {
+        color: #fefefe;
+    }
+
+    .dashboard-nav-card:hover .dashboard-nav-card-icon {
+        opacity: 1;
+        transition: all 0.2s ease;
+    }
+
+    .dashboard-nav-card-icon {
+        font-size: 1.25rem;
+        left: 1rem;
+        opacity: 0.5;
+        position: absolute;
+        top: 1rem;
+        transition: all 0.2s ease;
+        width: auto;
+    }
+
+    .dashboard-nav-card-title {
+        bottom: 0;
+        position: absolute;
+        right: 1rem;
+        text-align: right;
+    }
+
+
     /*.hero-full-screen .top-bar {*/
     /*    background: transparent;*/
     /*}*/
@@ -119,5 +160,7 @@
     /*a {*/
     /*    color: #42b983;*/
     /*}*/
+
+
 
 </style>
