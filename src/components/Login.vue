@@ -25,6 +25,8 @@
             </div>
 
             <router-link to="/Faculty/FacultyHome"><button class="button expanded">Login</button></router-link>
+            <vue-recaptcha sitekey="6LdVl8sUAAAAAANB6ln8rmx5Rvh8aym05P9IzzGg"></vue-recaptcha>
+
             <p>if you don't have an account, <b><router-link to="/Register">Register</router-link></b></p>
         </div>
         <div data-closable class="alert-box callout alert">
@@ -63,9 +65,10 @@
 
 <script>
     import NavHeader from "./NavHeader";
+    import VueRecaptcha from 'vue-recaptcha'
     export default {
         name: "Login",
-        components: {NavHeader},
+        components: {NavHeader, VueRecaptcha},
         data(){
             return{
 

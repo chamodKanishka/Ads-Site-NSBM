@@ -1,5 +1,6 @@
 <template>
     <div class="main col-md-12">
+        <link rel="manifest" href="./manifest.json">
         <div class="hero-full-screen fixed-top">
             <NavHeader/>
             <div class="middle-content-section">
