@@ -11,6 +11,7 @@ import 'script-loader!foundation-sites/dist/js/foundation.min'
 import 'jquery';
 import VueSwal from 'vue-swal'
 import 'vue-slider-component/theme/antd.css'
+import './registerServiceWorker'
 
 Vue.use(VueSwal)
 

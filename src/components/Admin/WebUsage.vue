@@ -32,6 +32,18 @@
                             <li><router-link to="/Admin/WebUsage" class="active">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Website Usage</span>
                             </router-link></li>
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span>Categories</span>
+                            </h6>
+                            <li><router-link to="">
+                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Faculty</span>
+                            </router-link></li>
+                            <li><router-link to="">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Hostel</span>
+                            </router-link></li>
+                            <li><router-link to="">
+                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Canteen</span>
+                            </router-link></li>
                         </ul>
                     </div>
                 </div>
