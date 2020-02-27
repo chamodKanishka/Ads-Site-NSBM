@@ -36,10 +36,12 @@
                 <h1>#Content__Section</h1>
                 <hooper :settings="hooperSettings">
                     <slide>
-                        slide 1
+                        <img src="../../images/nsbm.jpg" alt="image" class="image">
+                        <h7>Bed Room</h7>
                     </slide>
                     <slide>
-                        slide 2
+                        <img src="../../images/background.jpeg" class="image">
+                        <h7>Kitchen</h7>
                     </slide>
                     <slide>
                         slide 3
@@ -50,10 +52,6 @@
                     <slide>
                         slide 5
                     </slide>
-                    <slide>
-                        slide 6
-                    </slide>
-                    ...
                 </hooper>
 
             </div>
@@ -128,5 +126,11 @@
     }
     li{
         font-size: larger;
+    }
+
+    .image{
+        height: 80%;
+        width: 500px;
+        padding: 10px;
     }
 </style>
