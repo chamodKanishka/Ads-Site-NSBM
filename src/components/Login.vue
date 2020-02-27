@@ -25,6 +25,18 @@
             </div>
 
             <router-link to="/Faculty/FacultyHome"><button class="button expanded">Login</button></router-link>
+            <drag-verify :width="width"
+                         :height="height"
+                         :text="text"
+                         :success-text="successText"
+                         :background="background"
+                         :progress-bar-bg="progressBarBg"
+                         :completed-bg="completedBg"
+                         :handler-bg="handlerBg"
+                         :handler-icon="handlerIcon"
+                         :text-size="textSize"
+                         :success-icon="successIcon"
+                         :circle="getShape"></drag-verify>
             <vue-recaptcha sitekey="6LdVl8sUAAAAAANB6ln8rmx5Rvh8aym05P9IzzGg"></vue-recaptcha>
 
             <p>if you don't have an account, <b><router-link to="/Register">Register</router-link></b></p>
@@ -65,10 +77,11 @@
 
 <script>
     import NavHeader from "./NavHeader";
-    import VueRecaptcha from 'vue-recaptcha'
+    import VueRecaptcha from 'vue-recaptcha';
+    import dragVerify from 'vue-drag-verify'
     export default {
         name: "Login",
-        components: {NavHeader, VueRecaptcha},
+        components: {NavHeader, VueRecaptcha, dragVerify},
         data(){
             return{
 
