@@ -20,13 +20,13 @@
                             <li><router-link to="/Faculty/Events" >
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Events</span>
                             </router-link></li>
-                            <li><router-link to="/Faculty/Notices" class="active">
+                            <li><router-link to="/Faculty/Notices">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
                             </router-link></li>
                             <li><router-link to="/Admin/RegisterRequest" >
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                             </router-link></li>
-                            <li><router-link to="/Admin/AdsPayments">
+                            <li><router-link to="/Admin/AdsPayments" class="active">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
                             </router-link></li>
                             <li><router-link to="/Admin/UsersFeedback" >
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                    <h1>#Notices__Section</h1>
+                    <h1>#Inner_Conatct__Section</h1>
 
                 </div>
             </div>
@@ -46,27 +46,14 @@
 </template>
 
 <script>
-    import FacultyHome from "./FacultyNavbar";
-    import Footer from "../Footer";
+    import FacultyHome from "./Faculty/FacultyNavbar";
     export default {
-        name: "Notices",
-        components: {Footer, FacultyHome}
+        name: "InnerContact",
+        components: {FacultyHome}
     }
 </script>
 
 <style scoped>
-
-    b{
-        color: #fefefe;
-        margin-left: 20px;
-        font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 24px;
-    }
-    .active{
-        font-weight: bolder;
-        text-decoration: none;
-    }
-
 
     .app-dashboard {
         height: 87vh;
@@ -110,9 +97,8 @@
         font-weight: bolder;
         text-decoration: none;
     }
-    li span{
+    li{
         font-size: larger;
     }
-
 
 </style>

@@ -32,6 +32,7 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-vue": "^0.8.1",
     "vue": "^2.6.10",
+    "vue-advanced-cropper": "^0.16.0",
     "vue-avatar-cropper": "^1.0.5",
     "vue-avatar-editor-improved": "^1.0.4",
     "vue-dynamic-dropdown": "^1.0.11",

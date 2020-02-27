@@ -25,6 +25,7 @@ import MyAds from "../components/Hostel/MyAds";
 import Footer from "../components/Footer";
 import Notices from "../components/Faculty/Notices";
 import Events from "../components/Faculty/Events";
+import InnerContact from "../components/InnerContact";
 
 
 Vue.use(VueSwal)
@@ -148,6 +149,11 @@ export default new Router({
             path: "/Footer",
             name: "Footer",
             component: Footer
+        },
+        {
+            path: "/InnerContact",
+            name: "InnerContact",
+            component: InnerContact
         },
     ]
 })

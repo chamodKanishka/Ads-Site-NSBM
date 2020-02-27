@@ -23,7 +23,7 @@
                         <li><router-link to="/Contact" >
                             <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                         </router-link></li>
-                        <li><router-link to="/Contact">
+                        <li><router-link to="/InnerContact">
                             <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
                         </router-link></li>
                         <li><router-link to="/About" >
