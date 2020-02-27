@@ -37,6 +37,31 @@
             </div>
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                 <h1>#Events__Section</h1>
+                <hooper :settings="hooperSettings">
+                    <slide>
+                        <img src="../../images/nsbm.jpg" alt="image" class="image">
+                        <h7>Bed Room</h7>
+                    </slide>
+                    <slide>
+                        <img src="../../images/background.jpeg" class="image">
+                        <h7>Kitchen</h7>
+                    </slide>
+                    <slide>
+                        slide 3
+                    </slide>
+                    <slide>
+                        slide 4
+                    </slide>
+                    <slide>
+                        slide 5
+                    </slide>
+                    <slide>
+                        slide 6
+                    </slide>
+                    <slide>
+                        slide 7
+                    </slide>
+                </hooper>
 
             </div>
         </div>
@@ -48,9 +73,19 @@
 <script>
     import FacultyHome from "./FacultyNavbar";
     import Footer from "../Footer";
+    import { Hooper, Slide } from 'hooper';
+    import 'hooper/dist/hooper.css';
     export default {
         name: "Events",
-        components: {Footer, FacultyHome}
+        components: {Footer, FacultyHome, Hooper, Slide},
+        data() {
+            return {
+                hooperSettings: {
+                    itemsToShow: 2,
+                    centerMode: true
+                }
+            };
+        }
     }
 </script>
 
@@ -111,6 +146,12 @@
     }
     li span{
         font-size: larger;
+    }
+
+    .image{
+        height: 80%;
+        width: 500px;
+        padding: 10px;
     }
 
 </style>
