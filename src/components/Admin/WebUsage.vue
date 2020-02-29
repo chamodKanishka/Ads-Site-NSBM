@@ -32,18 +32,6 @@
                             <li><router-link to="/Admin/WebUsage" class="active">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Website Usage</span>
                             </router-link></li>
-                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                                <span>Categories</span>
-                            </h6>
-                            <li><router-link to="">
-                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Faculty</span>
-                            </router-link></li>
-                            <li><router-link to="">
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Hostel</span>
-                            </router-link></li>
-                            <li><router-link to="">
-                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Canteen</span>
-                            </router-link></li>
                         </ul>
                     </div>
                 </div>
@@ -78,38 +66,12 @@
 
 
 <!--                    bar graph-->
-                    <ul class="bar-graph">
-                        <li class="bar-graph-axis">
-                            <div class="bar-graph-label">10000</div>
-                            <div class="bar-graph-label">5000</div>
-                            <div class="bar-graph-label">2000</div>
-                            <div class="bar-graph-label">1000</div>
-                            <div class="bar-graph-label">100</div>
-                            <div class="bar-graph-label">0</div>
-                        </li>
-                        <li class="bar primary" style="height: 95%;" title="95">
-                            <div class="percent">95<span>%</span></div>
-                            <div class="description">Payments</div>
-                        </li>
-                        <li class="bar secondary" style="height: 90%;" title="90">
-                            <div class="percent">90<span>%</span></div>
-                            <div class="description">Feedback</div>
-                        </li>
-                        <li class="bar success" style="height: 80%;" title="80">
-                            <div class="percent">80<span>%</span></div>
-                            <div class="description">Registered</div>
-                        </li>
-                        <li class="bar warning" style="height: 75%;" title="75">
-                            <div class="percent">75<span>%</span></div>
-                            <div class="description">Cows that think they're Yetis</div>
-                        </li>
-                        <li class="bar alert" style="height: 40%;" title="40">
-                            <div class="percent">40<span>%</span></div>
-                            <div class="description">New Request</div>
-                        </li>
-                    </ul>
-
-
+                    <D3BarChart
+                            :config="chart_config"
+                            :datum="chart_data"
+                            :title="chart_title"
+                            :source="chart_source"
+                    ></D3BarChart>
 
                 </div>
             </div>
@@ -119,9 +81,38 @@
 
 <script>
     import AdminPanelHeader from "./AdminPanelHeader";
+    import { D3BarChart } from 'vue-d3-charts';
     export default {
         name: "WebUsage",
-        components: {AdminPanelHeader}
+        components: {AdminPanelHeader,D3BarChart
+        },
+        data() {
+            return {
+                chart_title: 'Your title goes here',
+                chart_source: 'Your source goes here',
+                chart_data: [
+                    //...
+                    {hours: 1648, production: 9613, year: '2007'},
+                    {hours: 2479, production: 6315, year: '2008'},
+                    {hours: 3200, production: 2541, year: '2009'},
+                    {hours: 1648, production: 9613, year: '2010'},
+                    {hours: 2479, production: 6315, year: '2011'},
+                    {hours: 3200, production: 2541, year: '2012'}
+                ],
+                chart_config: {
+                    key: 'year',
+                    currentKey: '2004',
+                    values: ['hours'],
+                    axis: {
+                        yTicks: 3
+                    },
+                    color: {
+                        default: '#222f3e',
+                        current: '#41B882'
+                    }
+                }
+            }
+        }
     }
 </script>
 
