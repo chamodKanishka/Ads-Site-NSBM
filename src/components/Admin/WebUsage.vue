@@ -81,11 +81,7 @@
                     </select>
 
                     <input type="text" v-model="chart_title">
-
-                    <!-- source control -->
                     <input type="text" v-model="chart_source">
-
-
                 </div>
             </div>
         </div>

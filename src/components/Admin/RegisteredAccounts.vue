@@ -66,107 +66,27 @@
                             </button>
                         </div>
                     </div>
-                    <table class="dashboard-table">
-                        <colgroup>
-                            <col width="200">
-                            <col width="150">
-                            <col width="130">
-                            <col width="60">
-                            <col width="220">
-                            <col width="120">
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th><a href="#">Profile<i class="fa fa-caret-down"></i></a></th>
-                            <th><a href="#">Contact Info<i class="fa fa-caret-down"></i></a></th>
-                            <th><a href="#">Account Type<i class="fa fa-caret-down"></i></a></th>
-                            <th><a href="#">Gender<i class="fa fa-caret-down"></i></a></th>
-                            <th><a href="#">Address<i class="fa fa-caret-down"></i></a></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="flex-container align-justify align-top">
-                                    <div class="flex-child-shrink">
-                                        <img class="dashboard-table-image" src="http://lorempixel.com/50/50/people/">
-                                    </div>
-                                    <div class="flex-child-grow">
-                                        <h6 class="dashboard-table-text">First Last Names</h6>
-                                        <span class="dashboard-table-timestamp">Registered : 03/04/2017</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Single Line</td>
-                            <td class="bold">Canteen User</td>
-                            <td>A Date</td>
-                            <td class="listing-inquiry-status">
-
-                                <div class="flex-container align-top">
-                                    <div class="flex-child">
-                                        <h6 class="dashboard-table-text"><a href="#">A longer wrapping item with an image that is aligned to the top</a></h6>
-                                    </div>
-                                </div>
-
-                            </td>
-                        </tr>
-                        </tbody>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="flex-container align-justify align-top">
-                                    <div class="flex-child-shrink">
-                                        <img class="dashboard-table-image" src="http://lorempixel.com/50/50/people/">
-                                    </div>
-                                    <div class="flex-child-grow">
-                                        <h6 class="dashboard-table-text">First Last Names</h6>
-                                        <span class="dashboard-table-timestamp">Registered : 03/04/2017</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Single Line</td>
-                            <td class="bold">Hostel User</td>
-                            <td>A Date</td>
-                            <td class="listing-inquiry-status">
-
-                                <div class="flex-container align-top">
-                                    <div class="flex-child">
-                                        <h6 class="dashboard-table-text"><a href="#">A longer wrapping item with an image that is aligned to the top</a></h6>
-                                    </div>
-                                </div>
-
-                            </td>
-                        </tr>
-                        </tbody>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="flex-container align-justify align-top">
-                                    <div class="flex-child-shrink">
-                                        <img class="dashboard-table-image" src="http://lorempixel.com/50/50/people/">
-                                    </div>
-                                    <div class="flex-child-grow">
-                                        <h6 class="dashboard-table-text">First Last Names</h6>
-                                        <span class="dashboard-table-timestamp">Registered : 03/04/2017</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Email: <br> Contact: </td>
-                            <td class="bold">Faculty User</td>
-                            <td>A Date</td>
-                            <td class="listing-inquiry-status">
-
-                                <div class="flex-container align-top">
-                                    <div class="flex-child">
-                                        <h6 class="dashboard-table-text"><a href="#">A longer wrapping item with an image that is aligned to the top</a></h6>
-                                    </div>
-                                </div>
-
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-
+                    <DataTable
+                            :header-fields="headerFields"
+                            :sort-field="sortField"
+                            :sort="sort"
+                            :data="data || []"
+                            :is-loading="isLoading"
+                            :css="datatableCss"
+                            not-found-msg="Items not found"
+                            @onUpdate="dtUpdateSort"
+                            trackBy="firstName"
+                    >
+                        <input
+                                slot="actions"
+                                slot-scope="props"
+                                type="button"
+                                class="btn btn-info"
+                                value="Edit"
+                                @click="dtEditClick(props)"
+                        >
+                        <Spinner slot="spinner"/>
+                    </DataTable>
                 </div>
             </div>
         </div>
@@ -175,9 +95,297 @@
 
 <script>
     import AdminPanelHeader from "./AdminPanelHeader";
+    import Spinner from "vue-simple-spinner";
+    import { DataTable, ItemsPerPageDropdown, Pagination } from "v-datatable-light";
+    import orderBy from "lodash.orderby";
+
+    const addZero = value => ("0" + value).slice(-2);
+
+    const formatDate = value => {
+        if (value) {
+            const dt = new Date(value);
+            return `${addZero(dt.getDate())}/${addZero(
+                dt.getMonth() + 1
+            )}/${dt.getFullYear()}`;
+        }
+        return "";
+    };
+
+    const initialData = [
+        {
+            firstName: "Lucca",
+            lastName: "Lin",
+            hometown: "Melbourne",
+            dob: "13/02/1975",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Zahid",
+            lastName: "Werner",
+            hometown: "Sydney",
+            dob: "18/09/1979",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Gabriel",
+            lastName: "Griffiths",
+            hometown: "Chicago",
+            dob: "25/11/1984",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Talha",
+            lastName: "Tucker",
+            hometown: "Berlim",
+            dob: "27/01/1999",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Aariz",
+            lastName: "Piper",
+            hometown: "Auckland",
+            dob: "11/07/1964",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Macsen",
+            lastName: "Schultz",
+            hometown: "Rio de Janeiro",
+            dob: "01/10/1987",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Sebastian",
+            lastName: "Cervantes",
+            hometown: "Brisbane",
+            dob: "13/11/1994",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Tayyab",
+            lastName: "Lister",
+            hometown: "Perth",
+            dob: "14/12/1997",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Anum",
+            lastName: "Warren",
+            hometown: "Manaus",
+            dob: "17/02/1951",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Areeba",
+            lastName: "Stein",
+            hometown: "Rome",
+            dob: "18/03/1954",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Alesha",
+            lastName: "Sharp",
+            hometown: "New York City",
+            dob: "18/04/1966",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Aadil",
+            lastName: "Fitzgerald",
+            hometown: "Vancouver",
+            dob: "18/05/1967",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Amaya",
+            lastName: "Dillon",
+            hometown: "Montreal",
+            dob: "11/06/1986",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Hammad",
+            lastName: "Ruiz",
+            hometown: "Buenos Aires",
+            dob: "12/07/1997",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Sapphire",
+            lastName: "Pacheco",
+            hometown: "Mexico City",
+            dob: "12/07/1996",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Amanah",
+            lastName: "Velez",
+            hometown: "London",
+            dob: "13/08/1992",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Mirza",
+            lastName: "Ratliff",
+            hometown: "Manchester",
+            dob: "03/09/1981",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Emre",
+            lastName: "Amos",
+            hometown: "Sapiranga",
+            dob: "05/10/1983",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Yunus",
+            lastName: "Vu",
+            hometown: "Madrid",
+            dob: "05/10/1984",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Duncan",
+            lastName: "Cotton",
+            hometown: "Barcelona",
+            dob: "06/10/1985",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        },
+        {
+            firstName: "Elvis",
+            lastName: "Ray",
+            hometown: "Lisbon",
+            dob: "08/11/1980",
+            created: new Date().getTime(),
+            updated: new Date().getTime()
+        }
+    ];
+
+
     export default {
         name: "RegisteredAccounts",
-        components: {AdminPanelHeader},
+        components: {AdminPanelHeader,
+            DataTable,
+            ItemsPerPageDropdown,
+            Pagination,
+            Spinner
+        },
+        data: function() {
+            return {
+                headerFields: [
+                    "__slot:checkboxes",
+                    {
+                        name: "firstName",
+                        label: "First Name",
+                        sortable: true
+                    },
+                    {
+                        name: "lastName",
+                        label: "Last Name",
+                        sortable: true
+                    },
+                    {
+                        name: "hometown",
+                        label: "Hometown",
+                        sortable: true
+                    },
+                    {
+                        name: "dob",
+                        label: "Data of Birght",
+                        sortable: true
+                    },
+                    {
+                        name: "created",
+                        label: "Created",
+                        sortable: true,
+                        format: formatDate
+                    },
+                    {
+                        name: "updated",
+                        label: "Updated",
+                        sortable: false,
+                        format: formatDate
+                    },
+                    "__slot:actions"
+                ],
+                data: initialData.slice(0, 10),
+                datatableCss: {
+                    table: "table table-bordered table-hover table-striped table-center",
+                    th: "header-item",
+                    thWrapper: "th-wrapper",
+                    thWrapperCheckboxes: "th-wrapper checkboxes",
+                    arrowsWrapper: "arrows-wrapper",
+                    arrowUp: "arrow up",
+                    arrowDown: "arrow down",
+                    footer: "footer"
+                },
+                itemsPerPageCss: {
+                    select: "item-per-page-dropdown"
+                },
+                isLoading: false,
+                sort: "asc",
+                sortField: "firstName",
+                listItemsPerPage: [5, 10, 20, 50, 100],
+                itemsPerPage: 10,
+                currentPage: 1,
+                totalItems: 16
+            };
+        },
+        methods: {
+            dtEditClick: props => alert("Click props:" + JSON.stringify(props)),
+
+            dtUpdateSort: function({ sortField, sort }) {
+                const sortedData = orderBy(initialData, [sortField], [sort]);
+                const start = (this.currentPage - 1) * this.itemsPerPage;
+                const end = this.currentPage * this.itemsPerPage;
+                this.data = sortedData.slice(start, end);
+                console.log("load data based on new sort", this.currentPage);
+            },
+
+            updateItemsPerPage: function(itemsPerPage) {
+                this.itemsPerPage = itemsPerPage;
+                if (itemsPerPage >= initialData.length) {
+                    this.data = initialData;
+                } else {
+                    this.data = initialData.slice(0, itemsPerPage);
+                }
+                console.log("load data with new items per page number", itemsPerPage);
+            },
+
+            changePage: function(currentPage) {
+                this.currentPage = currentPage;
+                const start = (currentPage - 1) * this.itemsPerPage;
+                const end = currentPage * this.itemsPerPage;
+                this.data = initialData.slice(start, end);
+                console.log("load data for the new page", currentPage);
+            },
+
+            updateCurrentPage: function(currentPage) {
+                this.currentPage = currentPage;
+                console.log("update current page without need to load data", currentPage);
+            }
+        }
     }
 </script>
 
@@ -632,6 +840,154 @@
 
 
 
+    #app {
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+
+    #app .title {
+        margin-bottom: 30px;
+    }
+
+    #app .items-per-page {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: #337ab7;
+    }
+
+    #app .items-per-page label {
+        margin: 0 15px;
+    }
+
+    /* Datatable CSS */
+    #v-datatable-light .header-item {
+        cursor: pointer;
+        color: #337ab7;
+        transition: color 0.15s ease-in-out;
+    }
+
+    #v-datatable-light .header-item:hover {
+        color: #ed9b19;
+    }
+
+    #v-datatable-light .header-item.no-sortable {
+        cursor: default;
+    }
+    #v-datatable-light .header-item.no-sortable:hover {
+        color: #337ab7;
+    }
+
+    #v-datatable-light .header-item .th-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+    }
+
+    #v-datatable-light .header-item .th-wrapper.checkboxes {
+        justify-content: center;
+    }
+
+    #v-datatable-light .header-item .th-wrapper .arrows-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        justify-content: space-between;
+    }
+
+    #v-datatable-light .header-item .th-wrapper .arrows-wrapper.centralized {
+        justify-content: center;
+    }
+
+    #v-datatable-light .arrow {
+        transition: color 0.15s ease-in-out;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+
+    #v-datatable-light .arrow.up {
+        border-bottom: 8px solid #337ab7;
+    }
+
+    #v-datatable-light .arrow.up:hover {
+        border-bottom: 8px solid #ed9b19;
+    }
+
+    #v-datatable-light .arrow.down {
+        border-top: 8px solid #337ab7;
+    }
+
+    #v-datatable-light .arrow.down:hover {
+        border-top: 8px solid #ed9b19;
+    }
+
+    #v-datatable-light .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+    }
+    /* End Datatable CSS */
+
+    /* Pagination CSS */
+    #v-datatable-light-pagination {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        height: 30px;
+    }
+
+    #v-datatable-light-pagination .pagination-item {
+        width: 30px;
+        margin-right: 5px;
+        font-size: 16px;
+        transition: color 0.15s ease-in-out;
+    }
+
+    #v-datatable-light-pagination .pagination-item.selected {
+        color: #ed9b19;
+    }
+
+    #v-datatable-light-pagination .pagination-item .page-btn {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: #337ab7;
+        transition: color 0.15s ease-in-out;
+    }
+
+    #v-datatable-light-pagination .pagination-item .page-btn:hover {
+        color: #ed9b19;
+    }
+
+    #v-datatable-light-pagination .pagination-item .page-btn:disabled {
+        cursor: not-allowed;
+        box-shadow: none;
+        opacity: 0.65;
+    }
+    /* END PAGINATION CSS */
+
+    /* ITEMS PER PAGE DROPDOWN CSS */
+    .item-per-page-dropdown {
+        background-color: transparent;
+        min-height: 30px;
+        border: 1px solid #337ab7;
+        border-radius: 5px;
+        color: #337ab7;
+    }
+    .item-per-page-dropdown:hover {
+        cursor: pointer;
+    }
 
 
 
