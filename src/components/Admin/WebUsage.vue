@@ -72,6 +72,10 @@
                             :title="chart_title"
                             :source="chart_source"
                     ></D3BarChart>
+                    <select v-model="chart_config.values">
+                        <option :value="[d]" v-for="d in ['hours', 'production']">{{d}}</option>
+                    </select>
+
 
                 </div>
             </div>
@@ -84,12 +88,13 @@
     import { D3BarChart } from 'vue-d3-charts';
     export default {
         name: "WebUsage",
-        components: {AdminPanelHeader,D3BarChart
+        components: {
+            AdminPanelHeader,D3BarChart
         },
         data() {
             return {
-                chart_title: 'Your title goes here',
-                chart_source: 'Your source goes here',
+                chart_title: 'Monthly Usage of Website',
+                chart_source: 'Source is Here',
                 chart_data: [
                     //...
                     {hours: 1648, production: 9613, year: '2007'},
@@ -97,7 +102,13 @@
                     {hours: 3200, production: 2541, year: '2009'},
                     {hours: 1648, production: 9613, year: '2010'},
                     {hours: 2479, production: 6315, year: '2011'},
-                    {hours: 3200, production: 2541, year: '2012'}
+                    {hours: 3200, production: 2541, year: '2012'},
+                    {hours: 1648, production: 9613, year: '2013'},
+                    {hours: 2479, production: 6315, year: '2014'},
+                    {hours: 3200, production: 2541, year: '2015'},
+                    {hours: 1648, production: 9613, year: '2016'},
+                    {hours: 2479, production: 6315, year: '2017'},
+                    {hours: 3200, production: 2541, year: '2018'}
                 ],
                 chart_config: {
                     key: 'year',
@@ -109,7 +120,8 @@
                     color: {
                         default: '#222f3e',
                         current: '#41B882'
-                    }
+                    },
+
                 }
             }
         }
