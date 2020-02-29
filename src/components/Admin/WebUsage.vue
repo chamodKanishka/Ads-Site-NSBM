@@ -76,6 +76,15 @@
                         <option :value="[d]" v-for="d in ['hours', 'production']">{{d}}</option>
                     </select>
 
+                    <select v-model="chart_config.currentKey">
+                        <option :value="d.year" v-for="d in data">{{d.year}}</option>
+                    </select>
+
+                    <input type="text" v-model="chart_title">
+
+                    <!-- source control -->
+                    <input type="text" v-model="chart_source">
+
 
                 </div>
             </div>
