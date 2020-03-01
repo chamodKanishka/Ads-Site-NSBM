@@ -42,6 +42,22 @@
                             </div>
                         </div>
                     </div>
+                    <float-thead-table border="true">
+                        <thead>
+                        <tr>
+                            <th><a id="demoHeader1">User Name</a></th>
+                            <th><a id="demoHeader2">Feedback Type</a></th>
+                            <th><a id="demoHeader3">Feedback</a></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>User Name, ID, Email</td>
+                            <td>Feedback type</td>
+                            <td>Feedback</td>
+                        </tr>
+                        </tbody>
+                    </float-thead-table>
                 </div>
             </div>
         </div>
@@ -50,9 +66,23 @@
 
 <script>
     import AdminPanelHeader from "./AdminPanelHeader";
+    import Vue from 'vue'
+    import FloatThead from 'vue-floatthead'
+    Vue.use(FloatThead)
     export default {
         name: "UsersFeedback",
-        components: {AdminPanelHeader}
+        components: {
+            AdminPanelHeader,
+            FloatThead
+        },
+        mounted () {
+            this.$refs.awesometable.$on('floatThead', (e, isFloated, floatContainer) =>
+                console.log('floatThead triggered', e, isFloated, floatContainer)
+            )
+            this.$refs.awesometable.$on('reflowed', (e, floatContainer) =>
+                console.log('reflowed triggered', e, floatContainer)
+            )
+        }
     }
 </script>
 
