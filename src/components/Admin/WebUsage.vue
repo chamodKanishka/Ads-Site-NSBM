@@ -20,9 +20,6 @@
                             <li><router-link to="/Admin/RegisteredAccounts">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Registered Accounts</span>
                             </router-link></li>
-                            <li><router-link to="/Admin/RegisterRequest">
-                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Register Request</span>
-                            </router-link></li>
                             <li><router-link to="/Admin/AdsPayments">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Ads Payments</span>
                             </router-link></li>

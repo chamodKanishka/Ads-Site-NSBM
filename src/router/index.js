@@ -15,7 +15,6 @@ import NoticeAdd from "../components/Faculty/NoticeAdd";
 import EventsAdd from "../components/Faculty/EventsAdd";
 import AdminPanelHeader from "../components/Admin/AdminPanelHeader";
 import RegisteredAccounts from "../components/Admin/RegisteredAccounts";
-import RegisterRequest from "../components/Admin/RegisterRequest";
 import UsersFeedback from "../components/Admin/UsersFeedback";
 import NavHeader from "../components/NavHeader";
 import AdsPayments from "../components/Admin/AdsPayments";
@@ -119,11 +118,6 @@ export default new Router({
             path: "/Admin/RegisteredAccounts",
             name: "RegisteredAccounts",
             component: RegisteredAccounts
-        },
-        {
-            path: "/Admin/RegisterRequest",
-            name: "RegisterRequest",
-            component: RegisterRequest
         },
         {
             path: "/Admin/UsersFeedback",
