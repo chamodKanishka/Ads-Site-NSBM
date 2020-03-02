@@ -53,7 +53,36 @@
                         slide 5
                     </slide>
                 </hooper>
-                <quick-edit v-model="emptyText"></quick-edit>
+                <table border="false">
+                    <thead>
+                    <th>
+                        <tr>
+                        </tr>
+                    </th>
+                    <th>
+                        <tr>
+                        </tr>
+                    </th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><lable>Location</lable></td>
+                        <td><quick-edit v-model="myValue"></quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>Address</lable></td>
+                        <td><quick-edit buttonOkText="Ok"></quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>Location</lable></td>
+                        <td><quick-edit type="txt"></quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>Location</lable></td>
+                        <td><quick-edit v-model="booleanYesText"></quick-edit></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -56,7 +56,7 @@
         </div>
         <div class="row copyright">
             <div class="container">
-                <p>Copyright NSBM © 2019. All Rights Reserved </p>
+                <p>Copyright NSBM © 2020. All Rights Reserved </p>
             </div>
         </div>
     </footer>
