@@ -53,7 +53,7 @@
                         slide 5
                     </slide>
                 </hooper>
-
+                <quick-edit v-model="emptyText"></quick-edit>
             </div>
         </div>
     </div>
@@ -62,13 +62,14 @@
 </template>
 
 <script>
+    import QuickEdit from 'vue-quick-edit';
     import HostelHome from "./HostelHome";
     import Footer from "../Footer";
     import { Hooper, Slide } from 'hooper';
     import 'hooper/dist/hooper.css';
     export default {
         name: "MyAds",
-        components: {Footer, HostelHome, Hooper, Slide},
+        components: {Footer, HostelHome, Hooper, Slide,QuickEdit},
         data() {
             return {
                 hooperSettings: {

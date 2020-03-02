@@ -17,9 +17,6 @@
                     </div>
                     <div class="app-dashboard-sidebar-inner">
                         <ul class="menu vertical">
-                            <li><router-link to="/Faculty/Events" >
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Events</span>
-                            </router-link></li>
                             <li><router-link to="/Faculty/Notices">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
                             </router-link></li>
@@ -35,8 +32,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                    <form class="vue-form" @submit.prevent="submit">
+                <div class=" off-canvas-content">
+                    <form class="vue-form CenterFrom" @submit.prevent="submit">
 
                         <div class="error-message">
                             <p v-show="!email.valid">Oh, please enter a valid email address.</p>
@@ -87,10 +84,6 @@
                             </div>
                         </fieldset>
                     </form>
-
-                    <div class="debug">
-                        <pre><code>{{ $data }}</code></pre>
-                    </div>
 
                 </div>
             </div>
@@ -528,6 +521,10 @@
         50% {
             transform: scale(0.8);
         }
+    }
+
+    .CenterFrom{
+        align-content: center;
     }
 
 
