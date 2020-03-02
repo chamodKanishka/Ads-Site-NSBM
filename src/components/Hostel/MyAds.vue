@@ -79,7 +79,7 @@
                     </tr>
                     <tr>
                         <td><lable>Location</lable></td>
-                        <td><quick-edit v-model="booleanYesText"></quick-edit></td>
+                        <td><quick-edit type="textarea"></quick-edit></td>
                     </tr>
                     </tbody>
                 </table>
