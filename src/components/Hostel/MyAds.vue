@@ -74,11 +74,27 @@
                         <td><quick-edit buttonOkText="Ok"></quick-edit></td>
                     </tr>
                     <tr>
-                        <td><lable>Location</lable></td>
+                        <td><lable>Contact No</lable></td>
                         <td><quick-edit type="txt"></quick-edit></td>
                     </tr>
                     <tr>
                         <td><lable>Location</lable></td>
+                        <td><quick-edit type="textarea"></quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>Type of hostle</lable></td>
+                        <td><quick-edit type="select">Boys</quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>For</lable></td>
+                        <td><quick-edit type="Select"></quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>Count</lable></td>
+                        <td><quick-edit type="select"></quick-edit></td>
+                    </tr>
+                    <tr>
+                        <td><lable>Description</lable></td>
                         <td><quick-edit type="textarea"></quick-edit></td>
                     </tr>
                     </tbody>
@@ -113,7 +129,7 @@
 <style scoped>
 
     .app-dashboard {
-        height: 87vh;
+        /*height: 200vh;*/
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
