@@ -63,6 +63,14 @@
                     </slide>
                 </hooper>
 
+                <cropper
+                        classname="cropper"
+                        :src="img"
+                        :stencilProps="{
+                          aspectRatio: 10/12
+                        }"
+                        @change="change"
+                ></cropper>
             </div>
         </div>
     </div>
@@ -74,18 +82,25 @@
     import FacultyHome from "./FacultyNavbar";
     import Footer from "../Footer";
     import { Hooper, Slide } from 'hooper';
+    import { Cropper } from 'vue-advanced-cropper';
     import 'hooper/dist/hooper.css';
     export default {
         name: "Events",
-        components: {Footer, FacultyHome, Hooper, Slide},
+        components: {Footer, FacultyHome, Hooper, Slide, Cropper},
         data() {
             return {
                 hooperSettings: {
                     itemsToShow: 2,
                     centerMode: true
-                }
+                },
+                img: 'https://images.pexels.com/photos/226746/pexels-photo-226746.jpeg'
             };
-        }
+        },
+        methods: {
+            change({coordinates, canvas}) {
+                console.log(coordinates, canvas)
+            }
+        },
     }
 </script>
 
@@ -152,6 +167,10 @@
         height: 80%;
         width: 500px;
         padding: 10px;
+    }
+    .cropper {
+        height: 600px;
+        background: #DDD;
     }
 
 </style>

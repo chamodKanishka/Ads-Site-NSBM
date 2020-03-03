@@ -67,7 +67,8 @@
                     <tbody>
                     <tr>
                         <td><lable>Location</lable></td>
-                        <td><quick-edit v-model="myValue"></quick-edit></td>
+                        <td><quick-edit v-model="myValue" buttonCancelText="Reset" buttonOkText="Update"></quick-edit></td>
+
                     </tr>
                     <tr>
                         <td><lable>Address</lable></td>
@@ -91,7 +92,7 @@
                     </tr>
                     <tr>
                         <td><lable>Count</lable></td>
-                        <td><quick-edit type="select"></quick-edit></td>
+                        <td><quick-edit placeholderValue=""></quick-edit></td>
                     </tr>
                     <tr>
                         <td><lable>Description</lable></td>
@@ -99,6 +100,7 @@
                     </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
@@ -120,6 +122,13 @@
                 hooperSettings: {
                     itemsToShow: 2,
                     centerMode: true
+                },
+                vueQuickEditClasses: {
+                    wrapper: 'form-group form-inline',
+                    input: 'form-control input-sm',
+                    buttons: 'btn-group btn-group-sm',
+                    buttonOk: 'btn btn-primary',
+                    buttonCancel: 'btn btn-link',
                 }
             };
         }
@@ -178,5 +187,12 @@
         height: 80%;
         width: 500px;
         padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+    .btn-group {
+        display: inline-block;
     }
 </style>
