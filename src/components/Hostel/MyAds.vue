@@ -53,7 +53,7 @@
                         slide 5
                     </slide>
                 </hooper>
-                <table border="false">
+                <table>
                     <thead>
                     <th>
                         <tr>
@@ -72,15 +72,11 @@
                     </tr>
                     <tr>
                         <td><lable>Address</lable></td>
-                        <td><quick-edit buttonOkText="Ok"></quick-edit></td>
+                        <td><quick-edit type="textarea"></quick-edit></td>
                     </tr>
                     <tr>
                         <td><lable>Contact No</lable></td>
                         <td><quick-edit type="txt"></quick-edit></td>
-                    </tr>
-                    <tr>
-                        <td><lable>Location</lable></td>
-                        <td><quick-edit type="textarea"></quick-edit></td>
                     </tr>
                     <tr>
                         <td><lable>Type of hostle</lable></td>

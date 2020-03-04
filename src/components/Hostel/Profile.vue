@@ -31,22 +31,42 @@
                         </ul>
                     </div>
                 </div>
-                <div class="app-dashboard-body-content off-canvas-content">
+                <div class="off-canvas-content">
                 </div>
+<!--                size is photo upload size in MB-->
                 <picture-input
                         ref="pictureInput"
                         width="150"
                         height="150"
-                        margin="6"
+                        margin="100"
                         accept="image/jpeg,image/png"
-                        size="4"
+                        radius="15"
+                        removable="true"
+                        changeOnClick="false"
+                        size="5"
                         button-class="btn"
                         :custom-strings="{
-                            upload: '<h1>Bummer!</h1>',
+                            upload: '<h1>Uploaded</h1>',
                             drag: 'Click Here or Drag and Drop'
                           }"
                         @change="onChange">
                 </picture-input>
+                <table>
+                <thead>
+                <tr>
+                    <th><a id="demoHeader1">User Name</a></th>
+                    <th><a id="demoHeader2">Feedback Type</a></th>
+                    <th><a id="demoHeader3">Feedback</a></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>User Name, ID, Email</td>
+                    <td>Feedback type</td>
+                    <td>Feedback</td>
+                </tr>
+                </tbody>
+                </table>
                 </div>
                 </div>
         <Footer/>
@@ -122,10 +142,8 @@
         font-size: larger;
     }
 
-    .image{
-        height: 80%;
-        width: 500px;
-        padding: 10px;
+    .imageUpload{
+        margin-top: 50px;
     }
 
     .form-group {
