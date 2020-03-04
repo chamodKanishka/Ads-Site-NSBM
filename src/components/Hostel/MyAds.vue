@@ -20,7 +20,7 @@
                         <li><router-link to="/Hostel/MyAds" class="active">
                             <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">My Ads</span>
                         </router-link></li>
-                        <li><router-link to="/Contact" >
+                        <li><router-link to="/Hostel/Profile" >
                             <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                         </router-link></li>
                         <li><router-link to="/InnerContact">
@@ -32,7 +32,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
+            <div class="app-dashboard-body-content off-canvas-content">
                 <h1>#Content__Section</h1>
                 <hooper :settings="hooperSettings">
                     <slide>

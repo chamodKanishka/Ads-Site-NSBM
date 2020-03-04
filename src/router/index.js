@@ -19,12 +19,13 @@ import UsersFeedback from "../components/Admin/UsersFeedback";
 import NavHeader from "../components/NavHeader";
 import AdsPayments from "../components/Admin/AdsPayments";
 import WebUsage from "../components/Admin/WebUsage";
-import Profile from "../components/Profile";
+import HostelProfile from "../components/Hostel/Profile";
 import MyAds from "../components/Hostel/MyAds";
 import Footer from "../components/Footer";
 import Notices from "../components/Faculty/Notices";
 import Events from "../components/Faculty/Events";
 import InnerContact from "../components/InnerContact";
+import Profile from "../components/Profile";
 
 
 Vue.use(VueSwal)
@@ -83,6 +84,11 @@ export default new Router({
             path: "/Hostel/MyAds",
             name: "MyAds",
             component: MyAds
+        },
+        {
+            path: "/Hostel/Profile",
+            name: "HostelProfile",
+            component: HostelProfile
         },
         {
             path: "/Faculty/FacultyHome",
