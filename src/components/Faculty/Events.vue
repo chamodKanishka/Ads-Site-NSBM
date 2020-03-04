@@ -71,6 +71,21 @@
                         }"
                         @change="change"
                 ></cropper>
+
+                <picture-input
+                        ref="pictureInput"
+                        width="150"
+                        height="150"
+                        margin="2"
+                        accept="image/jpeg,image/png"
+                        size="2.5"
+                        button-class="btn"
+                        :custom-strings="{
+                        upload: '<h1>Bummer!</h1>',
+                        drag: 'Drag & Drop or Click here'
+                      }"
+                        @change="onChange">
+                </picture-input>
             </div>
         </div>
     </div>
@@ -83,10 +98,11 @@
     import Footer from "../Footer";
     import { Hooper, Slide } from 'hooper';
     import { Cropper } from 'vue-advanced-cropper';
+    import PictureInput from 'vue-picture-input'
     import 'hooper/dist/hooper.css';
     export default {
         name: "Events",
-        components: {Footer, FacultyHome, Hooper, Slide, Cropper},
+        components: {Footer, FacultyHome, Hooper, Slide, Cropper, PictureInput},
         data() {
             return {
                 hooperSettings: {
@@ -99,6 +115,15 @@
         methods: {
             change({coordinates, canvas}) {
                 console.log(coordinates, canvas)
+            },
+            onChange (image) {
+                console.log('New picture selected!')
+                if (image) {
+                    console.log('Picture loaded.')
+                    this.image = image
+                } else {
+                    console.log('FileReader API not supported: use the <form>, Luke!')
+                }
             }
         },
     }
@@ -118,7 +143,7 @@
 
 
     .app-dashboard {
-        height: 87vh;
+        /*height: 87vh;*/
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
