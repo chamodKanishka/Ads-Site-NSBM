@@ -40,7 +40,7 @@
                 <md-content class="md-scrollbar">
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -51,7 +51,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -68,7 +68,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -79,7 +79,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -96,7 +96,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -107,7 +107,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -124,7 +124,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -135,7 +135,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -152,7 +152,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -163,7 +163,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -180,7 +180,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -191,7 +191,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -208,7 +208,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -219,7 +219,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -236,7 +236,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -247,7 +247,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -264,7 +264,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -275,7 +275,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -292,7 +292,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -303,7 +303,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -320,7 +320,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -331,7 +331,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
@@ -348,7 +348,7 @@
                         </md-card>
                         <md-card>
                         <md-card-media>
-                            <img src="/assets/examples/card-image-1.jpg" alt="People">
+                            <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
 
                         <md-card-header>
@@ -359,7 +359,7 @@
                         <md-card-expand>
                             <md-card-actions md-alignment="space-between">
                             <div>
-                                <md-button class="notes_bt">Action</md-button>
+                                <md-button class="notes_bt">Delete</md-button>
                             </div>
 
                             <md-card-expand-trigger>
