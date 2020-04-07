@@ -4,14 +4,6 @@
             <div class="columns medium-2">
                 <strong><b>Admin Panel</b></strong>
             </div>
-            <div class="col-md-4">
-                <div class="input-group input-group-rounded">
-                    <input class="input-group-field" type="search">
-                    <div class="input-group-button">
-                        <input type="submit" class="button secondary" value="Search">
-                    </div>
-                </div>
-            </div>
             <div id="topbar-responsive" class="topbar-responsive-links">
                 <div class="top-bar-right">
                     <ul class="menu simple vertical medium-horizontal">

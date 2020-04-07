@@ -24,7 +24,7 @@
                 <input class="input-group-field" type="password" placeholder="Password">
             </div>
 
-            <router-link to="/Faculty/FacultyHome"><button class="button expanded">Login</button></router-link>
+            <router-link to="/Faculty/Events"><button class="button expanded">Login</button></router-link>
             <vue-recaptcha sitekey="6LdVl8sUAAAAAANB6ln8rmx5Rvh8aym05P9IzzGg"></vue-recaptcha>
 
             <p>if you don't have an account, <b><router-link to="/Register">Register</router-link></b></p>

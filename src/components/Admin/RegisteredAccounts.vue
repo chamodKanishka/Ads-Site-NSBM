@@ -35,43 +35,26 @@
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2">Registered Accounts</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">New to Old</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Old to New</button>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span data-feather="calendar"></span>
-                                All Users
-                                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                    <a class="dropdown-item" href="#">Faculty Users</a>
-                                    <a class="dropdown-item" href="#">Canteen Users</a>
-                                    <a class="dropdown-item" href="#">Hostel action</a>
-                                </div>
-                            </button>
-                        </div>
+                        <md-field md-clearable class="md-toolbar-section-end">
+                                <md-input placeholder="Search by name..." v-model="search" @input="searchOnTable" />
+                         </md-field>
                     </div>
-                    <DataTable
-                            :header-fields="headerFields"
-                            :sort-field="sortField"
-                            :sort="sort"
-                            :data="data || []"
-                            :is-loading="isLoading"
-                            :css="datatableCss"
-                            not-found-msg="Items not found"
-                            @onUpdate="dtUpdateSort"
-                            trackBy="firstName"
-                    >
-                        <input
-                                slot="actions"
-                                slot-scope="props"
-                                type="button"
-                                class="btn btn-info"
-                                value="View"
-                                @click="dtEditClick(props)"
-                        >
-                        <Spinner slot="spinner"/>
-                    </DataTable>
+
+                         <md-table v-model="searched" md-sort="name" md-sort-order="asc" md-card md-fixed-header>                            <md-table-empty-state
+                                md-label="No users found"
+                                :md-description="`No user found for this '${search}' query. Try a different search term or check spellings.`">
+                                <md-button class="md-primary md-raised" @click="newUser">Search Again</md-button>
+                            </md-table-empty-state>
+
+                            <md-table-row slot="md-table-row" slot-scope="{ item }">
+                                <md-table-cell md-label="ID" md-sort-by="id" md-numeric>{{ item.id }}</md-table-cell>
+                                <md-table-cell md-label="Name" md-sort-by="name">{{ item.name }}</md-table-cell>
+                                <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
+                                <md-table-cell md-label="Gender" md-sort-by="gender">{{ item.gender }}</md-table-cell>
+                                <md-table-cell md-label="Contact No" md-sort-by="title">{{ item.title }}</md-table-cell>
+                            </md-table-row>
+                            </md-table>
+
                 </div>
             </div>
         </div>
@@ -79,237 +62,27 @@
 </template>
 
 <script>
-    import AdminPanelHeader from "./AdminPanelHeader";
+
+import AdminPanelHeader from "./AdminPanelHeader";
     import Spinner from "vue-simple-spinner";
     import { DataTable, ItemsPerPageDropdown, Pagination } from "v-datatable-light";
     import orderBy from "lodash.orderby";
 
-    const addZero = value => ("0" + value).slice(-2);
 
-    const formatDate = value => {
-        if (value) {
-            const dt = new Date(value);
-            return `${addZero(dt.getDate())}/${addZero(
-                dt.getMonth() + 1
-            )}/${dt.getFullYear()}`;
-        }
-        return "";
-    };
+ const toLower = text => {
+    return text.toString().toLowerCase()
+  }
 
-    const initialData = [
-        {
-            id:1,
-            firstName: "Lucca",
-            lastName: "Lin",
-            type:"Hostle",
-            Location: "Melbourne",
-            Contact: "13/02/1975",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:2,
-            firstName: "Zahid",
-            lastName: "Werner",
-            type:"Hostle",
-            Location: "Sydney",
-            Contact: "18/09/1979",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:3,
-            firstName: "Gabriel",
-            lastName: "Griffiths",
-            type:"Hostle",
-            Location: "Chicago",
-            Contact: "25/11/1984",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:4,
-            firstName: "Talha",
-            lastName: "Tucker",
-            type:"Hostle",
-            Location: "Berlim",
-            Contact: "27/01/1999",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:5,
-            firstName: "Aariz",
-            lastName: "Piper",
-            type:"Faculty",
-            Location: "Auckland",
-            Contact: "11/07/1964",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:6,
-            firstName: "Macsen",
-            lastName: "Schultz",
-            type:"Faculty",
-            Location: "Rio de Janeiro",
-            Contact: "01/10/1987",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:7,
-            firstName: "Sebastian",
-            lastName: "Cervantes",
-            type:"Faculty",
-            Location: "Brisbane",
-            Contact: "13/11/1994",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:8,
-            firstName: "Tayyab",
-            lastName: "Lister",
-            type:"Hostle",
-            Location: "Perth",
-            Contact: "14/12/1997",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:9,
-            firstName: "Anum",
-            lastName: "Warren",
-            type:"Hostle",
-            Location: "Manaus",
-            Contact: "17/02/1951",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:10,
-            firstName: "Areeba",
-            lastName: "Stein",
-            type:"Hostle",
-            Location: "Rome",
-            Contact: "18/03/1954",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:11,
-            firstName: "Alesha",
-            lastName: "Sharp",
-            type:"Faculty",
-            Location: "New York City",
-            Contact: "18/04/1966",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:12,
-            firstName: "Aadil",
-            lastName: "Fitzgerald",
-            type:"Hostle",
-            Location: "Vancouver",
-            Contact: "18/05/1967",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:13,
-            firstName: "Amaya",
-            lastName: "Dillon",
-            type:"Hostle",
-            Location: "Montreal",
-            Contact: "11/06/1986",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:14,
-            firstName: "Hammad",
-            lastName: "Ruiz",
-            type:"Hostle",
-            Location: "Buenos Aires",
-            Contact: "12/07/1997",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:15,
-            firstName: "Sapphire",
-            lastName: "Pacheco",
-            type:"Faculty",
-            Location: "Mexico City",
-            Contact: "12/07/1996",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:16,
-            firstName: "Amanah",
-            lastName: "Velez",
-            type:"Hostle",
-            Location: "London",
-            Contact: "13/08/1992",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:17,
-            firstName: "Mirza",
-            lastName: "Ratliff",
-            type:"Hostle",
-            Location: "Manchester",
-            Contact: "03/09/1981",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:18,
-            firstName: "Emre",
-            lastName: "Amos",
-            type:"Hostle",
-            Location: "Sapiranga",
-            Contact: "05/10/1983",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:19,
-            firstName: "Yunus",
-            lastName: "Vu",
-            type:"Hostle",
-            Location: "Madrid",
-            Contact: "05/10/1984",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:20,
-            firstName: "Duncan",
-            lastName: "Cotton",
-            type:"Hostle",
-            Location: "Barcelona",
-            Contact: "06/10/1985",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        },
-        {
-            id:21,
-            firstName: "Elvis",
-            lastName: "Ray",
-            type:"Hostle",
-            Location: "Lisbon",
-            Contact: "08/11/1980",
-            created: new Date().getTime(),
-            updated: new Date().getTime()
-        }
-    ];
+  const searchByName = (items, term) => {
+    if (term) {
+      return items.filter(item => toLower(item.name).includes(toLower(term)))
+    }
+    if (term) {
+      return items.filter(item => toLower(item.email).includes(toLower(term)))
+    }
 
-
+    return items
+  }    
     export default {
         name: "RegisteredAccounts",
         components: {AdminPanelHeader,
@@ -318,110 +91,164 @@
             Pagination,
             Spinner
         },
-        data: function() {
-            return {
-                headerFields: [
-                    {
-                        name: "id",
-                        label: "Account ID",
-                        sortable: true
-                    },
-                    {
-                        name: "firstName",
-                        label: "First Name",
-                        sortable: true
-                    },
-                    {
-                        name: "lastName",
-                        label: "Last Name",
-                        sortable: true
-                    },
-                    {
-                        name: "type",
-                        label: "Account Type",
-                        sortable: true
-                    },
-                    {
-                        name: "Location",
-                        label: "Location",
-                        sortable: true
-                    },
-                    {
-                        name: "Contact",
-                        label: "Contact No",
-                        sortable: true
-                    },
-                    {
-                        name: "created",
-                        label: "Account Created",
-                        sortable: true,
-                        format: formatDate
-                    },
-                    {
-                        name: "updated",
-                        label: "Last Updated",
-                        sortable: false,
-                        format: formatDate
-                    },
-                    "__slot:actions"
-                ],
-                data: initialData.slice(0, 21),
-                datatableCss: {
-                    table: "table table-bordered table-hover table-striped table-center",
-                    th: "header-item",
-                    thWrapper: "th-wrapper",
-                    thWrapperCheckboxes: "th-wrapper checkboxes",
-                    arrowsWrapper: "arrows-wrapper",
-                    arrowUp: "arrow up",
-                    arrowDown: "arrow down",
-                    footer: "footer"
-                },
-                itemsPerPageCss: {
-                    select: "item-per-page-dropdown"
-                },
-                isLoading: false,
-                sort: "asc",
-                sortField: "firstName",
-                listItemsPerPage: [5, 10, 20, 50, 100],
-                itemsPerPage: 10,
-                currentPage: 1,
-                totalItems: 16
-            };
+        data: () => ({
+      search: null,
+      searched: [],
+      users: [
+        {
+          id: 1,
+          name: "Shawna Dubbin",
+          email: "sdubbin0@geocities.com",
+          gender: "Male",
+          title: "Assistant Media Planner"
         },
-        methods: {
-            dtEditClick: props => alert("Click props:" + JSON.stringify(props)),
-
-            dtUpdateSort: function({ sortField, sort }) {
-                const sortedData = orderBy(initialData, [sortField], [sort]);
-                const start = (this.currentPage - 1) * this.itemsPerPage;
-                const end = this.currentPage * this.itemsPerPage;
-                this.data = sortedData.slice(start, end);
-                console.log("load data based on new sort", this.currentPage);
-            },
-
-            updateItemsPerPage: function(itemsPerPage) {
-                this.itemsPerPage = itemsPerPage;
-                if (itemsPerPage >= initialData.length) {
-                    this.data = initialData;
-                } else {
-                    this.data = initialData.slice(0, itemsPerPage);
-                }
-                console.log("load data with new items per page number", itemsPerPage);
-            },
-
-            changePage: function(currentPage) {
-                this.currentPage = currentPage;
-                const start = (currentPage - 1) * this.itemsPerPage;
-                const end = currentPage * this.itemsPerPage;
-                this.data = initialData.slice(start, end);
-                console.log("load data for the new page", currentPage);
-            },
-
-            updateCurrentPage: function(currentPage) {
-                this.currentPage = currentPage;
-                console.log("update current page without need to load data", currentPage);
-            }
+        {
+          id: 2,
+          name: "Odette Demageard",
+          email: "odemageard1@spotify.com",
+          gender: "Female",
+          title: "Account Coordinator"
+        },
+        {
+          id: 3,
+          name: "Vera Taleworth",
+          email: "vtaleworth2@google.ca",
+          gender: "Male",
+          title: "Community Outreach Specialist"
+        },
+        {
+          id: 4,
+          name: "Lonnie Izkovitz",
+          email: "lizkovitz3@youtu.be",
+          gender: "Female",
+          title: "Operator"
+        },
+        {
+          id: 5,
+          name: "Thatcher Stave",
+          email: "tstave4@reference.com",
+          gender: "Male",
+          title: "Software Test Engineer III"
+        },
+        {
+          id: 6,
+          name: "Karim Chipping",
+          email: "kchipping5@scribd.com",
+          gender: "Female",
+          title: "Safety Technician II"
+        },
+        {
+          id: 7,
+          name: "Helge Holyard",
+          email: "hholyard6@howstuffworks.com",
+          gender: "Female",
+          title: "Internal Auditor"
+        },
+        {
+          id: 8,
+          name: "Rod Titterton",
+          email: "rtitterton7@nydailynews.com",
+          gender: "Male",
+          title: "Technical Writer"
+        },
+        {
+          id: 9,
+          name: "Gawen Applewhite",
+          email: "gapplewhite8@reverbnation.com",
+          gender: "Female",
+          title: "GIS Technical Architect"
+        },
+        {
+          id: 10,
+          name: "Nero Mulgrew",
+          email: "nmulgrew9@plala.or.jp",
+          gender: "Female",
+          title: "Staff Scientist"
+        },
+        {
+          id: 11,
+          name: "Cybill Rimington",
+          email: "crimingtona@usnews.com",
+          gender: "Female",
+          title: "Assistant Professor"
+        },
+        {
+          id: 12,
+          name: "Maureene Eggleson",
+          email: "megglesonb@elpais.com",
+          gender: "Male",
+          title: "Recruiting Manager"
+        },
+        {
+          id: 13,
+          name: "Cortney Caulket",
+          email: "ccaulketc@cbsnews.com",
+          gender: "Male",
+          title: "Safety Technician IV"
+        },
+        {
+          id: 14,
+          name: "Selig Swynfen",
+          email: "sswynfend@cpanel.net",
+          gender: "Female",
+          title: "Environmental Specialist"
+        },
+        {
+          id: 15,
+          name: "Ingar Raggles",
+          email: "iragglese@cbc.ca",
+          gender: "Female",
+          title: "VP Sales"
+        },
+        {
+          id: 16,
+          name: "Karmen Mines",
+          email: "kminesf@topsy.com",
+          gender: "Male",
+          title: "Administrative Officer"
+        },
+        {
+          id: 17,
+          name: "Salome Judron",
+          email: "sjudrong@jigsy.com",
+          gender: "Male",
+          title: "Staff Scientist"
+        },
+        {
+          id: 18,
+          name: "Clarinda Marieton",
+          email: "cmarietonh@theatlantic.com",
+          gender: "Male",
+          title: "Paralegal"
+        },
+        {
+          id: 19,
+          name: "Paxon Lotterington",
+          email: "plotteringtoni@netvibes.com",
+          gender: "Female",
+          title: "Marketing Assistant"
+        },
+        {
+          id: 20,
+          name: "Maura Thoms",
+          email: "mthomsj@webeden.co.uk",
+          gender: "Male",
+          title: "Actuary"
         }
+      ]
+    }),
+    methods: {
+      newUser () {
+        window.alert('Noop')
+      },
+      searchOnTable () {
+        this.searched = searchByName(this.users, this.search)
+      }
+    },
+    created () {
+      this.searched = this.users
+    }
+        
     }
 </script>
 
@@ -800,231 +627,18 @@
     }
 
 
-
-/*tables CSS*/
-    .dashboard-table {
-        border-collapse: collapse;
-        margin-bottom: 0;
+    .md-field {
+        max-width: 300px;
+        background-color: #f3f2f2;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .dashboard-table td {
-        border-bottom: 1px dashed #d7d7d7;
+    .md-table-row{
+        width:100%
     }
 
-    .dashboard-table a {
-        color: #242424;
-    }
-
-    .dashboard-table .bold {
-        color: #0a0a0a;
-        font-weight: 600;
-    }
-
-    .dashboard-table thead {
-        background: none;
-        border: 0;
-        border-bottom: 1px solid #e6e6e6;
-        color: #8a8a8a;
-        font-size: 0.8rem;
-    }
-
-    .dashboard-table thead a {
-        color: #8a8a8a;
-    }
-
-    .dashboard-table tbody {
-        border: 1px solid #e1e1e1;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
-    }
-
-    .dashboard-table tbody tr {
-        transition: all 0.5s ease;
-    }
-
-    .dashboard-table tbody tr:hover {
-        background: #fcf7da;
-        transition: all 0.5s ease;
-    }
-
-    .dashboard-table tbody tr:nth-child(even) {
-        background: none;
-    }
-
-    .dashboard-table tr:last-child td {
-        border-bottom: 0;
-    }
-
-    .dashboard-table-text {
-        font-size: 1rem;
-        font-weight: 400;
-        margin-bottom: 0;
-        margin-top: 0.5rem;
-    }
-
-    .dashboard-table-timestamp {
-        color: #9a9a9a;
-        font-size: 0.9rem;
-        font-weight: 400;
-    }
-
-    .dashboard-table-image {
-        display: inline;
-        margin-right: 1rem;
-        margin-top: 0.6rem;
-        max-width: none;
-    }
-
-
-
-    #app {
-        font-family: "Avenir", Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
-
-    #app .title {
-        margin-bottom: 30px;
-    }
-
-    #app .items-per-page {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        color: #337ab7;
-    }
-
-    #app .items-per-page label {
-        margin: 0 15px;
-    }
-
-    /* Datatable CSS */
-    #v-datatable-light .header-item {
-        cursor: pointer;
-        color: #337ab7;
-        transition: color 0.15s ease-in-out;
-    }
-
-    #v-datatable-light .header-item:hover {
-        color: #ed9b19;
-    }
-
-    #v-datatable-light .header-item.no-sortable {
-        cursor: default;
-    }
-    #v-datatable-light .header-item.no-sortable:hover {
-        color: #337ab7;
-    }
-
-    #v-datatable-light .header-item .th-wrapper {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        font-weight: bold;
-    }
-
-    #v-datatable-light .header-item .th-wrapper.checkboxes {
-        justify-content: center;
-    }
-
-    #v-datatable-light .header-item .th-wrapper .arrows-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        justify-content: space-between;
-    }
-
-    #v-datatable-light .header-item .th-wrapper .arrows-wrapper.centralized {
-        justify-content: center;
-    }
-
-    #v-datatable-light .arrow {
-        transition: color 0.15s ease-in-out;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-    }
-
-    #v-datatable-light .arrow.up {
-        border-bottom: 8px solid #337ab7;
-    }
-
-    #v-datatable-light .arrow.up:hover {
-        border-bottom: 8px solid #ed9b19;
-    }
-
-    #v-datatable-light .arrow.down {
-        border-top: 8px solid #337ab7;
-    }
-
-    #v-datatable-light .arrow.down:hover {
-        border-top: 8px solid #ed9b19;
-    }
-
-    #v-datatable-light .footer {
-        display: flex;
-        justify-content: space-between;
-        width: 500px;
-    }
-    /* End Datatable CSS */
-
-    /* Pagination CSS */
-    #v-datatable-light-pagination {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 0;
-        padding: 0;
-        width: 300px;
-        height: 30px;
-    }
-
-    #v-datatable-light-pagination .pagination-item {
-        width: 30px;
-        margin-right: 5px;
-        font-size: 16px;
-        transition: color 0.15s ease-in-out;
-    }
-
-    #v-datatable-light-pagination .pagination-item.selected {
-        color: #ed9b19;
-    }
-
-    #v-datatable-light-pagination .pagination-item .page-btn {
-        background-color: transparent;
-        outline: none;
-        border: none;
-        color: #337ab7;
-        transition: color 0.15s ease-in-out;
-    }
-
-    #v-datatable-light-pagination .pagination-item .page-btn:hover {
-        color: #ed9b19;
-    }
-
-    #v-datatable-light-pagination .pagination-item .page-btn:disabled {
-        cursor: not-allowed;
-        box-shadow: none;
-        opacity: 0.65;
-    }
-    /* END PAGINATION CSS */
-
-    /* ITEMS PER PAGE DROPDOWN CSS */
-    .item-per-page-dropdown {
-        background-color: transparent;
-        min-height: 30px;
-        border: 1px solid #337ab7;
-        border-radius: 5px;
-        color: #337ab7;
-    }
-    .item-per-page-dropdown:hover {
-        cursor: pointer;
-    }
-
+    
 
 
 
