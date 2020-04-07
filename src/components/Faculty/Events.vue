@@ -29,9 +29,6 @@
                         <li><router-link to="/Admin/AdsPayments">
                             <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/UsersFeedback" >
-                            <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">About us</span>
-                        </router-link></li>
                     </ul>
                 </div>
             </div>

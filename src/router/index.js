@@ -24,7 +24,7 @@ import MyAds from "../components/Hostel/MyAds";
 import Footer from "../components/Footer";
 import Notices from "../components/Faculty/Notices";
 import Events from "../components/Faculty/Events";
-import InnerContact from "../components/InnerContact";
+import InnerContact from "../components/Hostel/InnerContact";
 import Profile from "../components/Profile";
 
 
@@ -79,6 +79,11 @@ export default new Router({
             path: "/Hostel/HostelHome",
             name: "HostelHome",
             component: HostelHome
+        },
+        {
+            path: "/Hostel/InnerContact",
+            name: "InnerContact",
+            component: InnerContact
         },
         {
             path: "/Hostel/MyAds",
@@ -150,10 +155,6 @@ export default new Router({
             name: "Footer",
             component: Footer
         },
-        {
-            path: "/InnerContact",
-            name: "InnerContact",
-            component: InnerContact
-        },
+        
     ]
 })

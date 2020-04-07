@@ -22,11 +22,8 @@
                             <li><router-link to="/Hostel/Profile" class="active">
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                             </router-link></li>
-                            <li><router-link to="/InnerContact">
+                            <li><router-link to="/Hostel/InnerContact">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
-                            </router-link></li>
-                            <li><router-link to="/About" >
-                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">About us</span>
                             </router-link></li>
                         </ul>
                     </div>

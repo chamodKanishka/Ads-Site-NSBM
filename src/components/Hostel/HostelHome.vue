@@ -172,6 +172,9 @@
         font-weight: bolder;
         text-decoration: none;
     }
+    li{
+        font-size: 18px;
+    }
 
 
     

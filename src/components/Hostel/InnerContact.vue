@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FacultyHome/>
+        <HostelHome/>
         <div class="app-dashboard shrink-medium">
             <div class="app-dashboard-body off-canvas-wrapper">
                 <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium" data-off-canvas>
@@ -17,73 +17,24 @@
                     </div>
                     <div class="app-dashboard-sidebar-inner">
                         <ul class="menu vertical">
-                            <li><router-link to="/Faculty/Notices">
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
+                            <li><router-link to="/Hostel/MyAds">
+                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">My Ads</span>
                             </router-link></li>
-                            <li><router-link to="/Admin/RegisterRequest" >
+                            <li><router-link to="/Hostel/Profile" >
                                 <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                             </router-link></li>
-                            <li><router-link to="/Admin/AdsPayments" class="active">
+                            <li><router-link to="/Hostel/InnerContact" class="active">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
-                            </router-link></li>
-                            <li><router-link to="/Admin/UsersFeedback" >
-                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">About us</span>
                             </router-link></li>
                         </ul>
                     </div>
                 </div>
                 <div class=" off-canvas-content">
-                    <form class="vue-form CenterFrom" @submit.prevent="submit">
-
-                        <div class="error-message">
-                            <p v-show="!email.valid">Oh, please enter a valid email address.</p>
-                        </div>
-
-                        <fieldset>
-                            <legend>Vue Contact Form</legend>
-                            <div>
-                                <label class="label" for="name">Name</label>
-                                <input type="text" name="name" id="name" required="" v-model="name">
-                            </div>
-                            <div>
-                                <label class="label" for="email">Email</label>
-                                <input type="email" name="email" id="email" required=""
-                                       :class="{ email , error: !email.valid }"
-                                       v-model="email.value">
-                            </div>
-                            <div>
-                                <h4>Framework</h4>
-
-                                <ul class="vue-form-list">
-                                    <li>
-                                        <input type="radio" name="radio-1" id="radio-1" value="angular"
-                                               v-model="selection.framework">
-                                        <label for="radio-1">AngularJS</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="radio-2" id="radio-2" value="react"
-                                               v-model="selection.framework">
-                                        <label for="radio-2">ReactJS</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="radio-3" id="radio-3" value="vue"
-                                               v-model="selection.framework">
-                                        <label for="radio-3">VueJS</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <label class="label" for="textarea">Message with Counter</label>
-                                <textarea class="message" name="textarea" id="textarea" required=""
-                                          v-model="message.text"
-                                          :maxlength="message.maxlength"></textarea>
-                                <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
-                            </div>
-                            <div>
-                                <input type="submit" value="Send Form">
-                            </div>
-                        </fieldset>
-                    </form>
+                        <md-field class="Contact">
+                        <label>Message</label>
+                        <md-textarea v-model="textarea" md-counter="80"></md-textarea>
+                        </md-field>
+                        <md-button class="md-primary">Send</md-button>
 
                 </div>
             </div>
@@ -93,56 +44,19 @@
 </template>
 
 <script>
-    import FacultyHome from "./Faculty/FacultyNavbar";
+    import { validationMixin } from 'vuelidate'
+    import {
+        required,
+        email,
+        minLength,
+        maxLength
+    } from 'vuelidate/lib/validators';
+    import HostelHome from "./HostelHome";
     export default {
         name: "InnerContact",
-        components: {FacultyHome},
-        data: function() {
-            return {
-                name: "John Doe",
-                email: {
-                    value: "jo@hnd.oe",
-                    valid: true
-                },
-                features: ["Reactivity", "Encapsulation", "Data Binding"],
-                selection: {
-                    member: "0",
-                    framework: "vue",
-                    features: []
-                },
-                message: {
-                    text: `Dear Mr. President,\n...`,
-                    maxlength: 255
-                },
-                submitted: false
-            };
-        },
-        methods: {
-            // submit form handler
-            submit: function() {
-                this.submitted = true;
-            },
-            // validate by type and value
-            validate: function(type, value) {
-                if (type === "email") {
-                    this.email.valid = this.isEmail(value) ? true : false;
-                }
-            },
-            // check for valid email adress
-            isEmail: function(value) {
-                return emailRegExp.test(value);
-            },
-            // check or uncheck all
-            checkAll: function(event) {
-                this.selection.features = event.target.checked ? this.features : [];
-            }
-        },
-        watch: {
-            // watching nested property
-            "email.value": function(value) {
-                this.validate("email", value);
-            }
-        }
+        components: {HostelHome},
+        
+        
     }
 </script>
 
@@ -203,20 +117,6 @@
         box-sizing: border-box;
     }
 
-    body {
-        color: #fff;
-        background: #949c4e;
-        background: linear-gradient(
-                115deg,
-                rgba(86, 216, 228, 1) 10%,
-                rgba(159, 1, 234, 1) 90%
-        );
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
 
     html,
     body,
@@ -525,6 +425,27 @@
 
     .CenterFrom{
         align-content: center;
+    }
+
+    .Contact{
+        margin-Top:30%;
+        margin-left: 80%;
+        display: flex;
+        width:400px;
+        height:300px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e0e0e0;
+    }
+
+    .md-primary{
+        color:white;
+        background-color: #19589d;
+        margin-left: 80%;
+        width:400px;
+    }
+    li{
+        color:#19589d;
     }
 
 
