@@ -63,9 +63,9 @@ import AdminPanelHeader from "./AdminPanelHeader";
             Spinner
         },
         data: () => ({
-      search: null,
-      searched: [],
-      users: [
+        search: null,
+        searched: [],
+        users: [
         {
           id: 1,
           name: "Shawna Dubbin",
