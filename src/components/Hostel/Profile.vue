@@ -31,13 +31,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="off-canvas-content">
-                </div>
 <!--                size is photo upload size in MB-->
                 <picture-input
                         ref="pictureInput"
-                        width="150"
-                        height="150"
+                        width="200"
+                        height="200"
                         margin="100"
                         accept="image/jpeg,image/png"
                         radius="15"
@@ -51,22 +49,7 @@
                           }"
                         @change="onChange">
                 </picture-input>
-                <table>
-                <thead>
-                <tr>
-                    <th><a id="demoHeader1">User Name</a></th>
-                    <th><a id="demoHeader2">Feedback Type</a></th>
-                    <th><a id="demoHeader3">Feedback</a></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>User Name, ID, Email</td>
-                    <td>Feedback type</td>
-                    <td>Feedback</td>
-                </tr>
-                </tbody>
-                </table>
+
                 </div>
                 </div>
         <Footer/>
@@ -76,10 +59,11 @@
 <script>
     import HostelHome from "./HostelHome";
     import PictureInput from 'vue-picture-input';
+    import QuickEdit from 'vue-quick-edit'
     import Footer from "../Footer";
     export default {
         name: "Profile",
-        components: {Footer, HostelHome, PictureInput},
+        components: {Footer, HostelHome, PictureInput, QuickEdit},
         methods: {
             onChange (image) {
                 console.log('New picture selected!')
@@ -152,5 +136,9 @@
     .btn-group {
         display: inline-block;
     }
+    /*.detail{*/
+    /*    margin-top: 20%;*/
+    /*    margin-right: 40%;*/
+    /*}*/
 
 </style>

@@ -36,8 +36,212 @@
                     </div>
                 </div>
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                    <h1>#Notices__Section</h1>
+                    <md-content class="md-scrollbar">
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
 
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    <md-card class="md-accent" md-with-hover>
+                    <md-ripple>
+                        <md-card-header>
+                        <div class="md-title">Note Title</div>
+                        <div class="md-subhead">Note Subtitle</div>
+                        </md-card-header>
+
+                        <md-card-content>
+                        Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+                        </md-card-content>
+
+                        <md-card-actions>
+                        <md-button class="notes_bt">Edit</md-button>
+                        <md-button class="notes_bt">Remove</md-button>
+                        </md-card-actions>
+                    </md-ripple>
+                    </md-card>
+                    </md-content>
                 </div>
             </div>
         </div>
@@ -55,6 +259,19 @@
 </script>
 
 <style scoped>
+
+    .md-accent {
+    width: 320px;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: red;
+    color: white;
+    margin:20px;
+  }
+  .notes_bt{
+      color:white;
+  }
 
     b{
         color: #fefefe;
@@ -112,6 +329,12 @@
     }
     li span{
         font-size: larger;
+    }
+
+    .md-content {
+        max-width: 1500px;
+        max-height: 700px;
+        overflow: auto;
     }
 
 

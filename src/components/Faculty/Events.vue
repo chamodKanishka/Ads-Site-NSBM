@@ -36,56 +36,230 @@
                 </div>
             </div>
             <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
-                <h1>#Events__Section</h1>
-                <hooper :settings="hooperSettings">
-                    <slide>
-                        <img src="../../images/nsbm.jpg" alt="image" class="image">
-                        <h7>Bed Room</h7>
-                    </slide>
-                    <slide>
-                        <img src="../../images/background.jpeg" class="image">
-                        <h7>Kitchen</h7>
-                    </slide>
-                    <slide>
-                        slide 3
-                    </slide>
-                    <slide>
-                        slide 4
-                    </slide>
-                    <slide>
-                        slide 5
-                    </slide>
-                    <slide>
-                        slide 6
-                    </slide>
-                    <slide>
-                        slide 7
-                    </slide>
-                </hooper>
+            <md-content class="md-scrollbar">
+                    <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Normal size</div>
+                            </md-card-header-text>
 
-                <cropper
-                        classname="cropper"
-                        :src="img"
-                        :stencilProps="{
-                          aspectRatio: 10/12
-                        }"
-                        @change="change"
-                ></cropper>
+                            <md-card-media>
+                            <img src="/assets/examples/avatar-2.jpg" alt="People">
+                            </md-card-media>
+                        </md-card-header>
 
-                <picture-input
-                        ref="pictureInput"
-                        width="150"
-                        height="150"
-                        margin="2"
-                        accept="image/jpeg,image/png"
-                        size="2.5"
-                        button-class="btn"
-                        :custom-strings="{
-                        upload: '<h1>Bummer!</h1>',
-                        drag: 'Drag & Drop or Click here'
-                      }"
-                        @change="onChange">
-                </picture-input>
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Medium size</div>
+                            </md-card-header-text>
+
+                            <md-card-media md-medium>
+                            <img src="/assets/examples/card-weather.png" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Big size</div>
+                            </md-card-header-text>
+
+                            <md-card-media md-big>
+                            <img src="/assets/examples/cover.png" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-media-actions>
+                            <md-card-media>
+                            <img src="/assets/examples/villains.png" alt="Cover">
+                            </md-card-media>
+
+                            <md-card-actions>
+                            <md-button class="md-icon-button">
+                                <md-icon>favorite</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button">
+                                <md-icon>bookmark</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button">
+                                <md-icon>share</md-icon>
+                            </md-button>
+                            </md-card-actions>
+                        </md-card-media-actions>
+                        </md-card>
+                                          <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Normal size</div>
+                            </md-card-header-text>
+
+                            <md-card-media>
+                            <img src="/assets/examples/avatar-2.jpg" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                    
+
+                        <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Medium size</div>
+                            </md-card-header-text>
+
+                            <md-card-media md-medium>
+                            <img src="/assets/examples/card-weather.png" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Big size</div>
+                            </md-card-header-text>
+
+                            <md-card-media md-big>
+                            <img src="/assets/examples/cover.png" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-media-actions>
+                            <md-card-media>
+                            <img src="/assets/examples/villains.png" alt="Cover">
+                            </md-card-media>
+
+                            <md-card-actions>
+                            <md-button class="md-icon-button">
+                                <md-icon>favorite</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button">
+                                <md-icon>bookmark</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button">
+                                <md-icon>share</md-icon>
+                            </md-button>
+                            </md-card-actions>
+                        </md-card-media-actions>
+                        </md-card>
+                                          <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Normal size</div>
+                            </md-card-header-text>
+
+                            <md-card-media>
+                            <img src="/assets/examples/avatar-2.jpg" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+
+                        <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Medium size</div>
+                            </md-card-header-text>
+
+                            <md-card-media md-medium>
+                            <img src="/assets/examples/card-weather.png" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                            <div class="md-title">Media card</div>
+                            <div class="md-subhead">Big size</div>
+                            </md-card-header-text>
+
+                            <md-card-media md-big>
+                            <img src="/assets/examples/cover.png" alt="People">
+                            </md-card-media>
+                        </md-card-header>
+
+                        <md-card-actions>
+                            <md-button>Action</md-button>
+                            <md-button>Action</md-button>
+                        </md-card-actions>
+                        </md-card>
+
+                        <md-card>
+                        <md-card-media-actions>
+                            <md-card-media>
+                            <img src="/assets/examples/villains.png" alt="Cover">
+                            </md-card-media>
+
+                            <md-card-actions>
+                            <md-button class="md-icon-button">
+                                <md-icon>favorite</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button">
+                                <md-icon>bookmark</md-icon>
+                            </md-button>
+
+                            <md-button class="md-icon-button">
+                                <md-icon>share</md-icon>
+                            </md-button>
+                            </md-card-actions>
+                        </md-card-media-actions>
+                        </md-card>
+                </md-content>
             </div>
         </div>
     </div>
@@ -96,40 +270,24 @@
 <script>
     import FacultyHome from "./FacultyNavbar";
     import Footer from "../Footer";
-    import { Hooper, Slide } from 'hooper';
-    import { Cropper } from 'vue-advanced-cropper';
-    import PictureInput from 'vue-picture-input'
-    import 'hooper/dist/hooper.css';
+    
     export default {
         name: "Events",
-        components: {Footer, FacultyHome, Hooper, Slide, Cropper, PictureInput},
+        components: {Footer, FacultyHome },
         data() {
             return {
-                hooperSettings: {
-                    itemsToShow: 2,
-                    centerMode: true
-                },
-                img: 'https://images.pexels.com/photos/226746/pexels-photo-226746.jpeg'
             };
-        },
-        methods: {
-            change({coordinates, canvas}) {
-                console.log(coordinates, canvas)
-            },
-            onChange (image) {
-                console.log('New picture selected!')
-                if (image) {
-                    console.log('Picture loaded.')
-                    this.image = image
-                } else {
-                    console.log('FileReader API not supported: use the <form>, Luke!')
-                }
-            }
         },
     }
 </script>
 
 <style scoped>
+    .md-content {
+        max-width: 1500px;
+        max-height: 700px;
+        overflow: auto;
+    }
+
     b{
         color: #fefefe;
         margin-left: 20px;
@@ -172,6 +330,7 @@
 
     .app-dashboard-sidebar .app-dashboard-sidebar-inner {
         /*height: 100%;*/
+        height:100vh;
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -197,5 +356,12 @@
         height: 600px;
         background: #DDD;
     }
+
+    .md-card {
+    width: 320px;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: top;
+  }
 
 </style>

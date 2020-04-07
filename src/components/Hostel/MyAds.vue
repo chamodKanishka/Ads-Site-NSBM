@@ -119,13 +119,6 @@
                     itemsToShow: 2,
                     centerMode: true
                 },
-                vueQuickEditClasses: {
-                    wrapper: 'form-group form-inline',
-                    input: 'form-control input-sm',
-                    buttons: 'btn-group btn-group-sm',
-                    buttonOk: 'btn btn-primary',
-                    buttonCancel: 'btn btn-link',
-                }
             };
         }
     }
