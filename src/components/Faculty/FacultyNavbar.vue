@@ -30,10 +30,11 @@
 
     .main{
         margin-top: -60px;
+        
     }
 
     .topbar-responsive {
-        background: #2c3840;
+        background-color: #19589d;
         padding: 1rem 1.5rem;
     }
 
@@ -43,7 +44,7 @@
     }
 
     .topbar-responsive .menu {
-        background: #2c3840;
+        background-color: #19589d;
     }
 
     .topbar-responsive .menu li:last-of-type {

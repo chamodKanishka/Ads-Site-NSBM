@@ -7,7 +7,7 @@
             <div id="topbar-responsive" class="topbar-responsive-links">
                 <div class="top-bar-right">
                     <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Faculty/FacultyHome">Home</router-link></li>
+                        <li><router-link to="/Faculty/Events">Home</router-link></li>
                         <li><router-link to="/Faculty/NoticeAdd" class="active">Add Notice</router-link></li>
                         <li><router-link to="/Faculty/EventsAdd">Add Event</router-link></li>
                         <li>
@@ -107,7 +107,7 @@
     }
 
     .topbar-responsive {
-        background: #2c3840;
+         background-color: #19589d;
         padding: 1rem 1.5rem;
     }
 
@@ -117,7 +117,7 @@
     }
 
     .topbar-responsive .menu {
-        background: #2c3840;
+        background-color: #19589d;
     }
 
     .topbar-responsive .menu li:last-of-type {

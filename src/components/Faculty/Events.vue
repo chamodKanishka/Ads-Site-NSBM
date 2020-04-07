@@ -385,13 +385,9 @@
 <script>
     import FacultyHome from "./FacultyNavbar";
     import Footer from "../Footer";
-    import { Hooper, Slide } from 'hooper';
-    import { Cropper } from 'vue-advanced-cropper';
-    import PictureInput from 'vue-picture-input'
-    import 'hooper/dist/hooper.css';
     export default {
         name: "Events",
-        components: {Footer, FacultyHome, Hooper, Slide, Cropper, PictureInput},
+        components: {Footer, FacultyHome},
     }
 </script>
 
