@@ -26,6 +26,7 @@ import Notices from "../components/Faculty/Notices";
 import Events from "../components/Faculty/Events";
 import InnerContact from "../components/Hostel/InnerContact";
 import Profile from "../components/Profile";
+import Payment from "../components/Hostel/Payment"
 
 
 Vue.use(VueSwal)
@@ -89,6 +90,11 @@ export default new Router({
             path: "/Hostel/MyAds",
             name: "MyAds",
             component: MyAds
+        },
+        {
+            path: "/Hostel/Payment",
+            name: "Payment",
+            component: Payment
         },
         {
             path: "/Hostel/Profile",

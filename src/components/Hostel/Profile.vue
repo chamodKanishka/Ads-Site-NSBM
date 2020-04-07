@@ -46,6 +46,10 @@
                           }"
                         @change="onChange">
                 </picture-input>
+                <md-field>
+                    <label>Initial Value (Read Only)</label>
+                    <md-input v-model="initial" readonly></md-input>
+                </md-field>
 
                 </div>
                 </div>
@@ -71,7 +75,17 @@
                     console.log('FileReader API not supported: use the <form>, Luke!')
                 }
             }
-        }
+        },
+        data: () => ({
+            initial: 'Chamod Kanishka',
+            type: null,
+            withLabel: null,
+            inline: null,
+            number: null,
+            textarea: null,
+            autogrow: null,
+            disabled: null
+            })
     }
 </script>
 

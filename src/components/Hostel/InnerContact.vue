@@ -431,10 +431,10 @@
         margin-Top:30%;
         margin-left: 80%;
         display: flex;
-        width:400px;
-        height:300px;
         flex-direction: column;
         align-items: center;
+        width:400px;
+        height:300px;
         background-color: #e0e0e0;
     }
 

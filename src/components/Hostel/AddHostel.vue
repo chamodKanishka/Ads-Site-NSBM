@@ -82,7 +82,9 @@
                             ></vue-upload-multiple-image>
                         </div>
                         <hr class="mb-4">
+                        <router-link to="/Hostel/Payment">
                         <button class="btn btn-primary btn-lg btn-block" type="submit">Next</button>
+                        </router-link>
                     </form>
                 </div>
             </div>
