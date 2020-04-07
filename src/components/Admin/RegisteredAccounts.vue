@@ -22,6 +22,8 @@
                                 <md-table-cell md-label="Name" md-sort-by="name">{{ item.name }}</md-table-cell>
                                 <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
                                 <md-table-cell md-label="Gender" md-sort-by="gender">{{ item.gender }}</md-table-cell>
+                                <md-table-cell md-label="Account Type" md-sort-by="title">{{ item.title }}</md-table-cell>
+                                <md-table-cell md-label="Address" md-sort-by="gender">{{ item.gender }}</md-table-cell>
                                 <md-table-cell md-label="Contact No" md-sort-by="title">{{ item.title }}</md-table-cell>
                             </md-table-row>
                             </md-table>

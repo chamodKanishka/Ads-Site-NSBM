@@ -22,9 +22,9 @@
 
                             <md-table-row slot="md-table-row" slot-scope="{ item }">
                                 <md-table-cell md-label="ID" md-sort-by="id" md-numeric>{{ item.id }}</md-table-cell>
-                                <md-table-cell md-label="Name" md-sort-by="name">{{ item.name }}</md-table-cell>
-                                <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
-                                <md-table-cell md-label="Gender" md-sort-by="gender">{{ item.gender }}</md-table-cell>
+                                <md-table-cell md-label="Date" md-sort-by="name">{{ item.name }}</md-table-cell>
+                                <md-table-cell md-label="Name and Account ID" md-sort-by="email">{{ item.email }}</md-table-cell>
+                                <md-table-cell md-label="Amount" md-sort-by="gender">{{ item.gender }}</md-table-cell>
                                 <md-table-cell md-label="Contact No" md-sort-by="title">{{ item.title }}</md-table-cell>
                             </md-table-row>
                             </md-table>
