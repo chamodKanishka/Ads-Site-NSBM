@@ -3,35 +3,6 @@
         <admin-panel-header/>
         <div class="app-dashboard shrink-medium">
             <div class="app-dashboard-body off-canvas-wrapper">
-                <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium" data-off-canvas>
-                    <div class="app-dashboard-sidebar-title-area">
-                        <div class="app-dashboard-close-sidebar">
-                            <h3 align="center" class="app-dashboard-sidebar-block-title">Menu</h3>
-                            <!-- Close button -->
-                        </div>
-                        <div class="app-dashboard-open-sidebar">
-                            <button id="open-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-open-sidebar-button show-for-medium" aria-label="open menu" type="button">
-                                <span aria-hidden="true"><a href="#"><i class="large fa fa-angle-double-right"></i></a></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="app-dashboard-sidebar-inner">
-                        <ul class="menu vertical">
-                            <li><router-link to="/Admin/RegisteredAccounts">
-                                <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Registered Accounts</span>
-                            </router-link></li>
-                            <li><router-link to="/Admin/AdsPayments">
-                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Ads Payments</span>
-                            </router-link></li>
-                            <li><router-link to="/Admin/UsersFeedback">
-                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Users Feedback</span>
-                            </router-link></li>
-                            <li><router-link to="/Admin/WebUsage" class="active">
-                                <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Website Usage</span>
-                            </router-link></li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2">Website Usage</h1>

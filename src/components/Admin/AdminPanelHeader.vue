@@ -1,31 +1,90 @@
 <template>
     <div class="main">
-        <nav class="top-bar topbar-responsive">
-            <div class="columns medium-2">
-                <strong><b>Admin Panel</b></strong>
-            </div>
-            <div id="topbar-responsive" class="topbar-responsive-links">
-                <div class="top-bar-right">
-                    <ul class="menu simple vertical medium-horizontal">
-                        <li><a href="#">Profile</a></li>
-                        <li>
-                            <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <md-toolbar class="md-primary">
+      <md-button class="md-icon-button" @click="showNavigation = true">
+        <md-icon>menu</md-icon>
+      </md-button>
+      <h3>Admin Panel</h3>
+
+      <div class="md-toolbar-section-end">
+        <md-button @click="showSidepanel = true">Options</md-button>
+      </div>
+    </md-toolbar>
+
+    <md-drawer :md-active.sync="showNavigation" md-swipeable>
+      <md-toolbar class="md-transparent" md-elevation="0">
+        <span class="md-title">Menu</span>
+      </md-toolbar>
+
+      <md-list>
+        <md-list-item>
+          <router-link to="/Admin/RegisteredAccounts" ><span class="md-list-item-text">Registered Accounts</span></router-link>
+        </md-list-item>
+
+        <md-list-item>
+           <router-link to="/Admin/AdsPayments" ><span class="md-list-item-text">Ads Payments</span></router-link>
+        </md-list-item>
+
+        <md-list-item>
+          <router-link to="/Admin/UsersFeedback" ><span class="md-list-item-text">User Feedback</span></router-link>
+        </md-list-item>
+
+        <md-list-item>
+          <router-link to="/Admin/WebUsage" ><span class="md-list-item-text">Website Usage</span></router-link>
+        </md-list-item>
+      </md-list>
+    </md-drawer>
+
+    <md-drawer class="md-right" :md-active.sync="showSidepanel">
+      <md-toolbar class="md-transparent" md-elevation="0">
+        <span class="md-title">Options</span>
+      </md-toolbar>
+
+      <md-list>
+        <md-list-item>
+          <span class="md-list-item-text">Abbey Christansen</span>
+        </md-list-item>
+
+        <md-list-item>
+          <span class="md-list-item-text">Alex Nelson</span>
+        </md-list-item>
+
+        <md-list-item>
+          <span class="md-list-item-text">Logout</span>
+        </md-list-item>
+      </md-list>
+    </md-drawer>
     </div>
 </template>
 
 <script>
     export default {
         name: "AdminPanelHeader",
+        data: () => ({
+      showNavigation: false,
+      showSidepanel: false
+    })
     }
 </script>
 
 <style scoped>
 
+    .page-container {
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(#000, 1);
+  }
+
+  .md-drawer {
+    width: 230px;
+    background-color: rgba(42, 57, 79, 0.8);
+    color:darkgrey;
+  }
+
+  .md-content {
+    padding: 16px;
+  }
     .main{
         margin-top: -60px;
     }
@@ -546,6 +605,14 @@
         border-radius: 0 5000px 5000px 0;
         font-size: 0.8rem;
         width: 100px;
+    }
+    span{
+        color: white;
+        font-size: 18px;
+    }
+
+    .md-title{
+        font-size: 24px;
     }
 
 
