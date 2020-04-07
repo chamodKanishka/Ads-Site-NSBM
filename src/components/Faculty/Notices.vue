@@ -265,7 +265,7 @@
     margin: 4px;
     display: inline-block;
     vertical-align: top;
-    background-color: red;
+    background-color: #19589d;
     color: white;
     margin:20px;
   }
@@ -333,7 +333,8 @@
 
     .md-content {
         max-width: 1500px;
-        max-height: 700px;
+        max-height: 100vh;
+        margin-bottom: 6cm;
         overflow: auto;
     }
 
