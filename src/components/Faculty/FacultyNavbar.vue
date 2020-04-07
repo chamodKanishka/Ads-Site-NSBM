@@ -2,12 +2,12 @@
     <div class="main">
         <nav class="top-bar topbar-responsive">
             <div class="columns medium-2">
-                <strong><b>Home</b></strong>
+                <strong><b>Faculty Home</b></strong>
             </div>
             <div id="topbar-responsive" class="topbar-responsive-links">
                 <div class="top-bar-right">
                     <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Faculty/Events"  class="active">Home</router-link></li>
+                        <li><router-link to="/Faculty/Events">Home</router-link></li>
                         <li><router-link to="/Faculty/NoticeAdd">Add Notice</router-link></li>
                         <li><router-link to="/Faculty/EventsAdd">Add Event</router-link></li>
                         <li>

@@ -1,22 +1,6 @@
 <template>
     <div class="main">
-        <nav class="top-bar topbar-responsive">
-            <div class="columns medium-2">
-                <strong><b>Events Add</b></strong>
-            </div>
-            <div id="topbar-responsive" class="topbar-responsive-links">
-                <div class="top-bar-right">
-                    <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Faculty/Events" >Home</router-link></li>
-                        <li><router-link to="/Faculty/NoticeAdd">Add Notice</router-link></li>
-                        <li><router-link to="/Faculty/EventsAdd"  class="active">Add Event</router-link></li>
-                        <li>
-                            <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <FacultyNavBar/>
         <div class="container">
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -73,6 +57,7 @@
 </template>
 
 <script>
+    import FacultyNavBar from './FacultyNavbar'
     import VueUploadMultipleImage from 'vue-upload-multiple-image'
     import Footer from "../Footer";
     export default {
@@ -84,7 +69,8 @@
         },
         components: {
             Footer,
-            VueUploadMultipleImage
+            VueUploadMultipleImage,
+            FacultyNavBar
         },
         methods: {
             uploadImageSuccess(formData, index, fileList) {
