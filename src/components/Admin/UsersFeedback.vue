@@ -35,29 +35,10 @@
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2">Users Feedbacks</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Feedbacks</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Problems</button>
-                            </div>
+                        <div class="btn-toolbar mb-2 mb-md-0">                       
                         </div>
                     </div>
-                    <float-thead-table border="true">
-                        <thead>
-                        <tr>
-                            <th><a id="demoHeader1">User Name</a></th>
-                            <th><a id="demoHeader2">Feedback Type</a></th>
-                            <th><a id="demoHeader3">Feedback</a></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>User Name, ID, Email</td>
-                            <td>Feedback type</td>
-                            <td>Feedback</td>
-                        </tr>
-                        </tbody>
-                    </float-thead-table>
+                    
                 </div>
             </div>
         </div>
@@ -73,14 +54,7 @@
             AdminPanelHeader,
             FloatThead
         },
-        mounted () {
-            this.$refs.awesometable.$on('floatThead', (e, isFloated, floatContainer) =>
-                console.log('floatThead triggered', e, isFloated, floatContainer)
-            )
-            this.$refs.awesometable.$on('reflowed', (e, floatContainer) =>
-                console.log('reflowed triggered', e, floatContainer)
-            )
-        }
+        
     }
 </script>
 
