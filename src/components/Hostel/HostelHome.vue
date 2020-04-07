@@ -7,7 +7,7 @@
             <div id="topbar-responsive" class="topbar-responsive-links">
                 <div class="top-bar-right">
                     <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Hostel/MyAds" class="active">Home</router-link></li>
+                        <li><router-link to="/Hostel/MyAds">Home</router-link></li>
                         <li><router-link to="/Hostel/Hostels">View Adds</router-link></li>
                         <li><router-link to="/Hostel/AddHostel">Post add</router-link></li>
                         <li>
@@ -35,7 +35,7 @@
     }
 
     .topbar-responsive {
-        background: #2c3840;
+        background: #19589d;
         padding: 1rem 1.5rem;
     }
 
@@ -45,7 +45,7 @@
     }
 
     .topbar-responsive .menu {
-        background: #2c3840;
+        background: #19589d;
     }
 
     .topbar-responsive .menu li:last-of-type {
@@ -174,43 +174,7 @@
     }
 
 
-    .app-dashboard {
-        height: 87vh;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .app-dashboard-body {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    .app-dashboard-sidebar {
-        background-color: #fefefe;
-        height: 100%;
-        overflow-x: visible;
-        overflow-y: auto;
-        z-index: 1;
-        transition: all 0.5s ease;
-    }
-
-    .app-dashboard-sidebar .app-dashboard-sidebar-inner {
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
-    .reveal-for-medium .app-dashboard-open-sidebar {
-        display: none;
-    }
+    
 
 
 </style>

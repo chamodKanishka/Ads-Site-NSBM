@@ -1,22 +1,6 @@
 <template>
     <div class="main">
-        <nav class="top-bar topbar-responsive">
-            <div class="columns medium-2">
-                <strong><b>Post Hostel</b></strong>
-            </div>
-            <div id="topbar-responsive" class="topbar-responsive-links">
-                <div class="top-bar-right">
-                    <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Hostel/MyAds">Home</router-link></li>
-                        <li><router-link to="/Hostel/Hostels">View Adds</router-link></li>
-                        <li><router-link to="/Hostel/AddHostel" class="active">Post add</router-link></li>
-                        <li>
-                            <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <HostelHome/>
         <div class="container">
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -115,6 +99,7 @@
 <script>
     import VueUploadMultipleImage from 'vue-upload-multiple-image'
     import Footer from "../Footer";
+    import HostelHome from "./HostelHome"
     export default {
         name: "AddHostel",
         data () {
@@ -124,7 +109,8 @@
         },
         components: {
             Footer,
-            VueUploadMultipleImage
+            VueUploadMultipleImage,
+            HostelHome
         },
         methods: {
             uploadImageSuccess(formData, index, fileList) {
@@ -289,7 +275,7 @@
     }
 
     b{
-        color: #fefefe;
+        color: #313452;
         margin-left: 20px;
         font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 24px;

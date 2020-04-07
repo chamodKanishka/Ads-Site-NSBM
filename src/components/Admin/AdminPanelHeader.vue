@@ -50,7 +50,9 @@
         </md-list-item>
 
         <md-list-item>
-          <span class="md-list-item-text">Logout</span>
+            <router-link to="/">
+                <span class="md-list-item-text">Logout</span>
+            </router-link>
         </md-list-item>
       </md-list>
     </md-drawer>
@@ -87,6 +89,7 @@
   }
     .main{
         margin-top: -60px;
+        
     }
     .topbar-responsive {
         padding: 1rem 1.5rem;

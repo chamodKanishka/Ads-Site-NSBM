@@ -1,22 +1,6 @@
 <template>
     <div class="main">
-        <nav class="top-bar topbar-responsive">
-            <div class="columns medium-2">
-                <strong><b>Hostels</b></strong>
-            </div>
-            <div id="topbar-responsive" class="topbar-responsive-links">
-                <div class="top-bar-right">
-                    <ul class="menu simple vertical medium-horizontal">
-                        <li><router-link to="/Hostel/MyAds">Home</router-link></li>
-                        <li><router-link to="/Hostel/Hostels" class="active">View Adds</router-link></li>
-                        <li><router-link to="/Hostel/AddHostel">Post add</router-link></li>
-                        <li>
-                            <router-link to="/"><button type="button" class="button hollow topbar-responsive-button">Log Out</button></router-link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <HostelHome/>
         <div class="row">
         <div class="col-md-2"></div>
             <div class="scroll-me col-md-8">
@@ -81,13 +65,14 @@
 <script>
     import Vue from 'vue'
     import vueNiceScrollbar from 'vue-nice-scrollbar'
+    import HostelHome from "./HostelHome"
 
     Vue.use(vueNiceScrollbar)
     import vPagination from 'vue-plain-pagination'
     import Footer from "../Footer";
     export default {
         name: "Hostels",
-        components: {Footer, vPagination,vueNiceScrollbar },
+        components: {Footer, vPagination,vueNiceScrollbar, HostelHome },
         data() {
             return {
                 currentPage: 1,
@@ -299,7 +284,7 @@
     }
 
     .kolom {
-        background: #2196f3;
+        background: #41b883;
         width: 200px;
         height: 200px;
         float: left;

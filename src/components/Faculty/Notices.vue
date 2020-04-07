@@ -334,7 +334,6 @@
     .md-content {
         max-width: 1500px;
         max-height: 100vh;
-        margin-bottom: 6cm;
         overflow: auto;
     }
 

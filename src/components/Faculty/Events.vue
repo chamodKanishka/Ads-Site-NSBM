@@ -39,6 +39,7 @@
 
                 <md-content class="md-scrollbar">
                         <md-card>
+                            
                         <md-card-media>
                             <img src="../../images/event.jpg" alt="People">
                         </md-card-media>
