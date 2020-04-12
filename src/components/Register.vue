@@ -106,12 +106,12 @@
         height: 110vh;
         overflow: hidden;
         margin-top: -60px;
-        background: url("https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") center center no-repeat;
+        background: url("../images/nsbm.jpg") center center no-repeat;
         background-size: cover;
     }
     .forms{
         background: #0a0a0a;
-        opacity: 0.8;
+        opacity: 0.9;
         margin-top: 90px;
         margin-bottom: 190px;
     }
@@ -123,6 +123,11 @@
 
     form .form-icons h4 {
         margin-bottom: 1rem;
+        color: white;
+    }
+
+    p{
+        color:white;
     }
 
     form .form-icons .input-group-label {
