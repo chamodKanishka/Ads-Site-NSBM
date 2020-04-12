@@ -71,16 +71,16 @@
         margin-left: -10px;
     }
     .contact-us-section {
-        padding: 2rem;
+        padding: 1rem;
         background: #0a0a0a;
-        opacity: 0.8;
+        opacity: 0.9;
         color: #fefefe;
         margin-left: 11%;
 
     }
 
     .col-md-12{
-        background: url("https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") center center no-repeat;
+        background: url("../images/nsbm.jpg") center center no-repeat;
         background-size: cover;
         margin-top: -60px;
     }
@@ -239,6 +239,10 @@
     .social > .fa {
         color: #fefefe;
         margin-right: .25rem;
+    }
+
+    .placeholder{
+        color: black;
     }
 
 
