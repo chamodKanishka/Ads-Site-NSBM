@@ -92,13 +92,13 @@
         margin: -60px;
         padding-bottom: 15%;
         overflow: hidden;
-        background: url("https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") center center no-repeat;
+        background: url("../images/nsbm.jpg") center center no-repeat;
         background-size: cover;
 
     }
     .forms{
         background: #0a0a0a;
-        opacity: 0.8;
+        opacity: 0.9;
         margin-top: 8%;
         margin-left: -10px;
     }
@@ -109,6 +109,7 @@
 
     form .form-icons h4 {
         margin-bottom: 1rem;
+        color:cornsilk;
     }
 
     form .form-icons .input-group-label {
@@ -191,6 +192,10 @@
         transform: translateY(-50%);
         right: 1rem;
         font-weight: bold;
+    }
+
+    p{
+        color: white;
     }
 
 
