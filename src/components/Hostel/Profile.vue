@@ -28,12 +28,13 @@
                         </ul>
                     </div>
                 </div>
+                <main role="main" class="container">
 <!--                size is photo upload size in MB-->
                 <picture-input
                         ref="pictureInput"
                         width="200"
                         height="200"
-                        margin="100"
+                        margin="10"
                         accept="image/jpeg,image/png"
                         radius="15"
                         removable="true"
@@ -46,11 +47,23 @@
                           }"
                         @change="onChange">
                 </picture-input>
-                <md-field>
-                    <label>Initial Value (Read Only)</label>
+                <div class="details">
+                    <md-field class="fields">
+                    <label>(Can't change)</label>
                     <md-input v-model="initial" readonly></md-input>
-                </md-field>
-
+                    </md-field>
+                    <md-field>
+                    <label>Contact No</label>
+                    <md-input v-model="contact"></md-input>
+                    </md-field>
+                    <md-field>
+                    <label>Email</label>
+                    <md-input v-model="email"></md-input>
+                    </md-field>
+                    <md-button class="md-raised">Update</md-button>
+                    
+                </div>
+                </main>
                 </div>
                 </div>
         <Footer/>
@@ -78,6 +91,8 @@
         },
         data: () => ({
             initial: 'Chamod Kanishka',
+            initialC: '0756618720',
+            email: 'chamodkanishka77@gmail.com',
             type: null,
             withLabel: null,
             inline: null,
@@ -91,6 +106,9 @@
 
 <style scoped>
 
+    main{
+        margin-left: 100px;
+    }
     .app-dashboard {
         height: 87vh;
         display: -webkit-flex;
@@ -147,9 +165,18 @@
     .btn-group {
         display: inline-block;
     }
-    /*.detail{*/
-    /*    margin-top: 20%;*/
-    /*    margin-right: 40%;*/
-    /*}*/
+    .details{
+       margin-left: 38%;
+       margin-top: 30px;
+       max-width: 300px;
+       background-color: #f4f4f4;
+       padding:20px;
+    }
+
+    .md-raised{
+        background-color:#19589d;
+        color: white;
+    }
+    
 
 </style>
