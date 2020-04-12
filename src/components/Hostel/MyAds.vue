@@ -15,6 +15,7 @@
                         </button>
                     </div>
                 </div>
+            
                 <div class="app-dashboard-sidebar-inner">
                     <ul class="menu vertical">
                         <li><router-link to="/Hostel/MyAds" class="active">
@@ -29,25 +30,28 @@
                     </ul>
                 </div>
             </div>
+        <main role="main" class="container">
             <div class="app-dashboard-body-content off-canvas-content">
-                <h1>#Content__Section</h1>
                 <hooper :settings="hooperSettings">
                     <slide>
-                        <img src="../../images/nsbm.jpg" alt="image" class="image">
+                        <img src="../../images/livingroom.jpg" alt="image" class="image">
+                        <h7>Living Room</h7>
+                    </slide>
+                    <slide>
+                        <img src="../../images/bedroom.jpg" alt="image" class="image">
                         <h7>Bed Room</h7>
                     </slide>
                     <slide>
-                        <img src="../../images/background.jpeg" class="image">
+                        <img src="../../images/bathroom.jpg" alt="image" class="image">
+                        <h7>Bath Room</h7>
+                    </slide>
+                    <slide>
+                        <img src="../../images/studyroom.jpg" alt="image" class="image">
+                        <h7>Study Room</h7>
+                    </slide>
+                    <slide>
+                        <img src="../../images/kitchen.jpg" alt="image" class="image">
                         <h7>Kitchen</h7>
-                    </slide>
-                    <slide>
-                        slide 3
-                    </slide>
-                    <slide>
-                        slide 4
-                    </slide>
-                    <slide>
-                        slide 5
                     </slide>
                 </hooper>
                 <table>
@@ -95,8 +99,10 @@
                 </table>
 
             </div>
-        </div>
+        </main>
+            </div>
     </div>
+
         <Footer/>
     </div>
 </template>
@@ -113,7 +119,7 @@
         data() {
             return {
                 hooperSettings: {
-                    itemsToShow: 2,
+                    itemsToShow: 3,
                     centerMode: true
                 },
             };
