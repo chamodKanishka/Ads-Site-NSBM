@@ -27,6 +27,7 @@ import Events from "../components/Faculty/Events";
 import InnerContact from "../components/Hostel/InnerContact";
 import Profile from "../components/Profile";
 import Payment from "../components/Hostel/Payment"
+import ContactFac from "../components/Faculty/ContactFac"
 
 
 Vue.use(VueSwal)
@@ -125,6 +126,11 @@ export default new Router({
             path: "/Faculty/Events",
             name: "Events",
             component: Events
+        },
+        {
+            path: "/Faculty/ContactFac",
+            name: "ContactFac",
+            component: ContactFac
         },
         {
             path: "/Admin/AdminPanelHeader",

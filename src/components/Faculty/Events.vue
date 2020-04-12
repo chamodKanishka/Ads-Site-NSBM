@@ -23,11 +23,11 @@
                         <li><router-link to="/Faculty/Notices">
                             <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/RegisterRequest" >
+                        <li><router-link to="" >
                             <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/AdsPayments">
-                            <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact us</span>
+                        <li><router-link to="/Faculty/ContactFac">
+                            <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact Admin</span>
                         </router-link></li>
                     </ul>
                 </div>
@@ -454,7 +454,6 @@
 
   .md-card {
     width: 320px;
-    margin: 4px;
     display: inline-block;
     vertical-align: top;
     background-color: #19589d;
