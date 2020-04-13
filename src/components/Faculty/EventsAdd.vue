@@ -5,7 +5,7 @@
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
                 <h2>Add new event</h2>
-                <p class="lead">Enter every detail in correct. we don't get responsibility of your fault</p>
+                <p class="lead">Enter details about events that students need to know</p>
             </div>
 
             <div class="row">
@@ -20,6 +20,12 @@
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Title is required.
                                 </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Location">Event Subtitle</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="location" placeholder="Subtitle" required>
                             </div>
                         </div>
                         <h4 class="mb-3">Event Description</h4>

@@ -5,7 +5,7 @@
             <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
                 <h2>Add a Notice</h2>
-                <p class="lead">Enter every detail in correct. we don't get responsibility of your fault</p>
+                <p class="lead">Enter details about notes that students need to know</p>
             </div>
 
             <div class="row">
@@ -22,6 +22,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="Location">Notice Sub Title</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="location" placeholder="Subtitle" required>
+                            </div>
+                        </div>
 
                         <h4 class="mb-3">Description</h4>
                         <div class="md-3">
@@ -34,7 +40,7 @@
                                   aria-haspopup="true"></textarea>
                         </div>
                         <div class="row">
-                            <div class="col-md-5 mb-3">
+                            <div class="col-md-4 mb-3">
                                 <label for="country">Batch</label>
                                 <select class="custom-select d-block w-100" id="country" required>
                                     <option value="">All</option>
@@ -55,6 +61,19 @@
                                     <option>Business</option>
                                     <option>Computing</option>
                                     <option>Engineering</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select one of them
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">Degree</label>
+                                <select class="custom-select d-block w-100" id="state" required>
+                                    <option value="">All</option>
+                                    <option>Plymouth SE</option>
+                                    <option>Dublin MSI</option>
+                                    <option>UGC CS</option>
 
                                 </select>
                                 <div class="invalid-feedback">

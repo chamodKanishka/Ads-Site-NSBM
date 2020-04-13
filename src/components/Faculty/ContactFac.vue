@@ -23,9 +23,6 @@
                         <li><router-link to="/Faculty/Notices">
                             <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
                         </router-link></li>
-                        <li><router-link to="/Admin/RegisterRequest" >
-                            <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
-                        </router-link></li>
                         <li><router-link to="/Admin/AdsPayments">
                             <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact Admin</span>
                         </router-link></li>

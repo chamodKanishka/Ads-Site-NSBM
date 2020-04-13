@@ -129,6 +129,13 @@
 
 <style scoped>
 
+    main{
+        width:100%;
+    }
+    .app-dashboard-body-content{
+        margin-left: 1.5in;
+    }
+
     .app-dashboard {
         /*height: 200vh;*/
         display: -webkit-flex;

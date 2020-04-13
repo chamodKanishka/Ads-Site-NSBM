@@ -23,9 +23,6 @@
                             <li><router-link to="/Faculty/Notices" class="active">
                                 <i class="large fa fa-institution"></i><span class="app-dashboard-sidebar-text">Notices</span>
                             </router-link></li>
-                            <li><router-link to="" >
-                                <i class="large fa fa-hourglass"></i><span class="app-dashboard-sidebar-text">Profile</span>
-                            </router-link></li>
                             <li><router-link to="/Faculty/ContactFac">
                                 <i class="large fa fa-industry"></i><span class="app-dashboard-sidebar-text">Contact Admin</span>
                             </router-link></li>
@@ -257,6 +254,9 @@
 
 <style scoped>
 
+    .app-dashboard-body-content{
+        margin-bottom: -2in;
+    }
     .md-accent {
     width: 320px;
     margin: 4px;
