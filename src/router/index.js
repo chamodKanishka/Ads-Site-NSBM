@@ -28,6 +28,7 @@ import InnerContact from "../components/Hostel/InnerContact";
 import Profile from "../components/Profile";
 import Payment from "../components/Hostel/Payment"
 import ContactFac from "../components/Faculty/ContactFac"
+import RegisterFacUser from '../components/Admin/RegisterFacUser';
 
 
 Vue.use(VueSwal)
@@ -156,6 +157,11 @@ export default new Router({
             path: "/Admin/WebUsage",
             name: "WebUsage",
             component: WebUsage
+        },
+        {
+            path: "/Admin/RegisterFacUser",
+            name: "RegisterFacUser",
+            component: RegisterFacUser
         },
         {
             path: "/Profile",

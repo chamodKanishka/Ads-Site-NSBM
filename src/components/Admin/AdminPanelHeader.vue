@@ -32,6 +32,9 @@
         <md-list-item>
           <router-link to="/Admin/WebUsage" ><span class="md-list-item-text">Website Usage</span></router-link>
         </md-list-item>
+        <md-list-item>
+          <router-link to="/Admin/RegisterFacUser" ><span class="md-list-item-text">Resgister Faculty User</span></router-link>
+        </md-list-item>
       </md-list>
     </md-drawer>
 
@@ -41,14 +44,6 @@
       </md-toolbar>
 
       <md-list>
-        <md-list-item>
-          <span class="md-list-item-text">Abbey Christansen</span>
-        </md-list-item>
-
-        <md-list-item>
-          <span class="md-list-item-text">Alex Nelson</span>
-        </md-list-item>
-
         <md-list-item>
             <router-link to="/">
                 <span class="md-list-item-text">Logout</span>
