@@ -4,46 +4,489 @@
         <div class="row">
         <div class="col-md-2"></div>
             <div class="scroll-me col-md-8">
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
-                <div class="kolom"></div>
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+                    <md-card>
+                    <md-card-media>
+                        <img src="../../images/hostel.jpg" alt="Hostel">
+                    </md-card-media>
+
+                    <md-card-header>
+                        <div class="md-title">Hostel Type</div>
+                        <div class="md-subhead">For Boys or Girls</div>
+                    </md-card-header>
+
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                        <md-card-expand-trigger>
+                            <md-button class="details">Details</md-button>
+                        </md-card-expand-trigger>
+                        </md-card-actions>
+
+                        <md-card-expand-content>
+                        <md-card-content>
+                            Location: Pitipana<br/>
+                            Address: 151 Homagama Rd, Pitipana<br/>
+                            Count: 5<br/>
+                            Contact No:0756618720<br/>
+                        </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                    </md-card>
+
+
             </div>
         <div class="col-md-2"></div>
         </div>
@@ -290,6 +733,24 @@
         float: left;
         display: inline-block;
         margin: 11px;
+    }
+
+    .card-expansion {
+    height: 480px;
+    }
+
+    .md-card {
+        width: 200px;
+        margin: 10px;
+        background-color: #19589d;
+        display: inline-block;
+        vertical-align: top;
+         display: inline-block;
+        color: white;
+    }
+
+    .details{
+        color:white;
     }
 
 </style>
