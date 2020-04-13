@@ -25,7 +25,6 @@ import Footer from "../components/Footer";
 import Notices from "../components/Faculty/Notices";
 import Events from "../components/Faculty/Events";
 import InnerContact from "../components/Hostel/InnerContact";
-import Profile from "../components/Profile";
 import Payment from "../components/Hostel/Payment"
 import ContactFac from "../components/Faculty/ContactFac"
 import RegisterFacUser from '../components/Admin/RegisterFacUser';
@@ -162,11 +161,6 @@ export default new Router({
             path: "/Admin/RegisterFacUser",
             name: "RegisterFacUser",
             component: RegisterFacUser
-        },
-        {
-            path: "/Profile",
-            name: "Profile",
-            component: Profile
         },
         {
             path: "/Footer",

@@ -44,7 +44,8 @@
 </template>
 
 <script>
-    import { validationMixin } from 'vuelidate'
+    import { validationMixin } from 'vuelidate';
+    import PictureInput from 'vue-picture-input';
     import {
         required,
         email,
@@ -55,7 +56,7 @@
     import Footer from "../Footer"
     export default {
         name: "ContactFac",
-        components: {FacultyNavbar, Footer},
+        components: {FacultyNavbar, Footer, PictureInput},
         
         
     }

@@ -15,7 +15,7 @@
             <form novalidate class="md-layout" @submit.prevent="validateUser">
             <md-card class="md-layout-item md-size-50 md-small-size-100 area">
                 <md-card-header>
-                <div class="md-title">Users</div>
+                <div class="md-title">Register New User</div>
                 </md-card-header>
 
                 <md-card-content>
@@ -66,8 +66,26 @@
                         <span class="md-error" v-else-if="!$v.form.position.minlength">Invalid position name</span>
                     </md-field>
                 </md-card-content>
-
                 <md-progress-bar md-mode="indeterminate" v-if="sending" />
+
+                <picture-input
+                        ref="pictureInput"
+                        width="150"
+                        height="150"
+                        margin="10"
+                        accept="image/jpeg,image/png"
+                        radius="15"
+                        removable="true"
+                        changeOnClick="false"
+                        size="3"
+                        button-class="btn"
+                        :custom-strings="{
+                            upload: '<h1>Uploaded</h1>',
+                            drag: 'Add Profile Picture'
+                          }"
+                        @change="onChange">
+                </picture-input>
+
 
                 <md-card-actions>
                 <md-button type="submit" class="md-primary" :disabled="sending">Create user</md-button>
@@ -90,11 +108,12 @@ import { validationMixin } from 'vuelidate'
     minLength,
     maxLength
   } from 'vuelidate/lib/validators'
+  import PictureInput from 'vue-picture-input';
 
 export default {
     name: "RegisterFacUser",
     components: {
-            AdminPanelHeader,
+            AdminPanelHeader, PictureInput
         },
         mixins: [validationMixin],
     data: () => ({
@@ -189,6 +208,7 @@ export default {
 
   .form{
       margin-left: 4in;
+      margin-bottom: 0.5in;
   }
 
   .md-primary{
