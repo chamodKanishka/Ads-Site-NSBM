@@ -6,20 +6,6 @@
                 <div class="app-dashboard-body-content off-canvas-content" data-off-canvas-content>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1 class="h2">Website Usage</h1>
-                        <ul class="stats-list">
-                            <li>
-                                135 <span class="stats-list-label">Feedback</span>
-                            </li>
-                            <li class="stats-list-positive">
-                                17,678 <span class="stats-list-label">Registered</span>
-                            </li>
-                            <li class="stats-list-negative">
-                                2,390 <span class="stats-list-label">New Request</span>
-                            </li>
-                            <li class="stats-list-massive">
-                                2,390 <span class="stats-list-label">Payments</span>
-                            </li>
-                        </ul>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span data-feather="calendar"></span>
@@ -40,16 +26,18 @@
                             :title="chart_title"
                             :source="chart_source"
                     ></D3BarChart>
+                    <div class="chart">
                     <select v-model="chart_config.values">
                         <option :value="[d]" v-for="d in ['hours', 'production']">{{d}}</option>
                     </select>
 
                     <select v-model="chart_config.currentKey">
-                        <option :value="d.year" v-for="d in data">{{d.year}}</option>
+                        <option :value="d.month" v-for="d in data">{{d.month}}</option>
                     </select>
 
                     <input type="text" v-model="chart_title">
                     <input type="text" v-model="chart_source">
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,21 +58,21 @@
                 chart_source: 'Source is Here',
                 chart_data: [
                     //...
-                    {hours: 1648, production: 9613, year: '2007'},
-                    {hours: 2479, production: 6315, year: '2008'},
-                    {hours: 3200, production: 2541, year: '2009'},
-                    {hours: 1648, production: 9613, year: '2010'},
-                    {hours: 2479, production: 6315, year: '2011'},
-                    {hours: 3200, production: 2541, year: '2012'},
-                    {hours: 1648, production: 9613, year: '2013'},
-                    {hours: 2479, production: 6315, year: '2014'},
-                    {hours: 3200, production: 2541, year: '2015'},
-                    {hours: 1648, production: 9613, year: '2016'},
-                    {hours: 2479, production: 6315, year: '2017'},
-                    {hours: 3200, production: 2541, year: '2018'}
+                    {hours: 1648, production: 9613, month: 'January'},
+                    {hours: 2479, production: 6315, month: 'February'},
+                    {hours: 3200, production: 2541, month: 'March'},
+                    {hours: 1648, production: 9613, month: 'April'},
+                    {hours: 2479, production: 6315, month: 'May'},
+                    {hours: 3200, production: 2541, month: 'June'},
+                    {hours: 1648, production: 9613, month: 'July'},
+                    {hours: 2479, production: 6315, month: 'August'},
+                    {hours: 3200, production: 2541, month: 'September'},
+                    {hours: 1648, production: 9613, month: 'Octomber'},
+                    {hours: 2479, production: 6315, month: 'November'},
+                    {hours: 3200, production: 2541, month: 'December'}
                 ],
                 chart_config: {
-                    key: 'year',
+                    key: 'month',
                     currentKey: '2004',
                     values: ['hours'],
                     axis: {
@@ -656,6 +644,16 @@
     .bar-graph .bar.alert {
         border: 1px solid #cc4b37;
         background: linear-gradient(#d67060, #cc4b37 70%);
+    }
+
+
+    .chart{
+        margin-left: 25%;
+        width:500px;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
