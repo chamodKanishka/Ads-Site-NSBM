@@ -13,10 +13,11 @@ import VueSwal from 'vue-swal'
 import 'vue-slider-component/theme/antd.css'
 import './registerServiceWorker'
 import VueMaterial from 'vue-material'
+import VueResource from 'vue-resource'
 import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(VueSwal)
-
+Vue.use(VueResource)
 Vue.use(router)
 Vue.use(VueMaterial)
 

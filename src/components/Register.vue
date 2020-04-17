@@ -14,44 +14,44 @@
               <span class="input-group-label">
                 <i class="fa fa-user"></i>
               </span>
-                <input class="input-group-field" type="text" placeholder="First name">
+                <input class="input-group-field" type="text" placeholder="First name" name="fName" v-model="userData.fName">
             </div>
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fa fa-user"></i>
               </span>
-                <input class="input-group-field" type="text" placeholder="Last name">
+                <input class="input-group-field" type="text" placeholder="Last name" v-model="userData.lName">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fa fa-envelope"></i>
               </span>
-                <input class="input-group-field" type="email" placeholder="Email">
+                <input class="input-group-field" type="email" placeholder="Email" v-model="userData.userEmail">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fa fa-phone"></i>
               </span>
-                <input class="input-group-field" type="tel" placeholder="Contact No">
+                <input class="input-group-field" type="tel" placeholder="Contact No" v-model="userData.cNo">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fa fa-key"></i>
               </span>
-                <input class="input-group-field" type="password" placeholder="Password">
+                <input class="input-group-field" type="password" placeholder="Password" v-model="userData.userPassword">
             </div>
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fa fa-key"></i>
               </span>
-                <input class="input-group-field" type="password" placeholder="Re-Type Password">
+                <input class="input-group-field" type="password" placeholder="Re-Type Password" >
             </div>
         </div>
 
-        <router-link to="/Admin/RegisteredAccounts"><button class="button expanded">Register</button></router-link>
+        <router-link to="/Hostel/MyAds"><button class="button expanded" type="submit" @click.prevent="submitted" router-link to="/Login">Register</button></router-link>
         <p>if you already have an account, just <b><router-link to="/Login">Login</router-link></b></p>
 
         <div data-closable class="alert-box callout alert">
@@ -92,7 +92,35 @@
     import NavHeader from "./NavHeader";
     export default {
         name: "Register",
-        components: {NavHeader}
+        components: {NavHeader},
+        data() {
+            return {
+                userData:{
+                    fName:'',
+                    lName:'',
+                    userEmail:'',
+                    cNo:'',
+                    userPassword:'',
+                },
+                isSubmitted:false,
+            
+            };
+        },
+        methods: {
+
+            submitted(){
+                this.$http.post('http://localhost:8085/api/user/register', this.userData)
+                    then( response  =>
+                    {
+                        console.response(log);
+                    },
+                    error =>{
+                        console.log(error);
+                    });
+            }
+
+        },
+        
     }
 </script>
 

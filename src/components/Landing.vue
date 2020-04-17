@@ -64,7 +64,7 @@
     .hero-full-screen .middle-content-section {
         text-align: center;
         color: #fefefe;
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0,0,0,0.6);
         padding:50px;
     }
 
