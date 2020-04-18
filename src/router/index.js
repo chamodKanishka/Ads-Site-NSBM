@@ -38,7 +38,7 @@ Vue.use(Model)
 export default new Router({
     routes: [
         {
-            path: "/",
+            path: "",
             name: "Landing",
             component: Landing
         },

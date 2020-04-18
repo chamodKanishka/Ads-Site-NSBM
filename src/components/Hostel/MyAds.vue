@@ -54,50 +54,51 @@
                         <h7>Kitchen</h7>
                     </slide>
                 </hooper>
-                <table>
-                    <thead>
-                    <th>
-                        <tr>
-                        </tr>
-                    </th>
-                    <th>
-                        <tr>
-                        </tr>
-                    </th>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><lable>Location</lable></td>
-                        <td><quick-edit v-model="myValue" buttonCancelText="Reset" buttonOkText="Update"></quick-edit></td>
+                <md-table>
+                    <md-table-row>
+                    </md-table-row>
 
-                    </tr>
-                    <tr>
-                        <td><lable>Address</lable></td>
-                        <td><quick-edit type="textarea"></quick-edit></td>
-                    </tr>
-                    <tr>
-                        <td><lable>Contact No</lable></td>
-                        <td><quick-edit type="txt"></quick-edit></td>
-                    </tr>
-                    <tr>
-                        <td><lable>Type of hostle</lable></td>
-                        <td><quick-edit type="select">Boys</quick-edit></td>
-                    </tr>
-                    <tr>
-                        <td><lable>For</lable></td>
-                        <td><quick-edit type="Select"></quick-edit></td>
-                    </tr>
-                    <tr>
-                        <td><lable>Count</lable></td>
-                        <td><quick-edit placeholderValue=""></quick-edit></td>
-                    </tr>
-                    <tr>
-                        <td><lable>Description</lable></td>
-                        <td><quick-edit type="textarea"></quick-edit></td>
-                    </tr>
-                    </tbody>
-                </table>
+                    <md-table-row>
+                        <md-table-cell>Location</md-table-cell>
+                        <md-table-cell>Loc</md-table-cell>
+                        
+                    </md-table-row>
 
+                    <md-table-row>
+                        <md-table-cell>Address</md-table-cell>
+                        <md-table-cell>Address string</md-table-cell>
+                        
+                    </md-table-row>
+
+                    <md-table-row>
+                        <md-table-cell>Contact No</md-table-cell>
+                        <md-table-cell>number off add adder</md-table-cell>
+                    </md-table-row>
+
+                    <md-table-row>
+                        <md-table-cell>Tyoe of Hostel</md-table-cell>
+                        <md-table-cell>Type</md-table-cell>
+                       
+                    </md-table-row>
+
+                    <md-table-row>
+                        <md-table-cell>For</md-table-cell>
+                        <md-table-cell>Girls/Boys</md-table-cell>
+                        
+                    </md-table-row>
+
+                    <md-table-row>
+                        <md-table-cell>Count</md-table-cell>
+                        <md-table-cell>15</md-table-cell>
+                        
+                    </md-table-row>
+
+                    <md-table-row>
+                        <md-table-cell>Description</md-table-cell>
+                        <md-table-cell>Description abou the hostel</md-table-cell>
+                        
+                    </md-table-row>
+    </md-table>
             </div>
         </main>
             </div>

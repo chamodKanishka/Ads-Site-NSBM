@@ -43,15 +43,9 @@
               </span>
                 <input class="input-group-field" type="password" placeholder="Password" v-model="userData.userPassword">
             </div>
-            <div class="input-group">
-              <span class="input-group-label">
-                <i class="fa fa-key"></i>
-              </span>
-                <input class="input-group-field" type="password" placeholder="Re-Type Password" >
-            </div>
         </div>
-
         <router-link to="/Hostel/MyAds"><button class="button expanded" type="submit" @click.prevent="submitted" router-link to="/Login">Register</button></router-link>
+        <md-snackbar>The user {{ fName }}  {{ lName }}was saved with success!</md-snackbar>
         <p>if you already have an account, just <b><router-link to="/Login">Login</router-link></b></p>
 
         <div data-closable class="alert-box callout alert">
@@ -108,6 +102,14 @@
         },
         methods: {
 
+            clearForm(){
+                this.userData.fName = null
+                this.userData.lName = null
+                this.userData.userEmail = null
+                this.userData.cNo = null
+                userPassword = null
+            },
+
             submitted(){
                 this.$http.post('http://localhost:8085/api/user/register', this.userData)
                     then( response  =>
@@ -117,6 +119,9 @@
                     error =>{
                         console.log(error);
                     });
+                    window.setTimeout(() => {
+                        this.clearForm()
+                    }, 1500);
             }
 
         },
@@ -245,5 +250,8 @@
         font-weight: bold;
     }
 
+    .md-progress-spinner {
+    margin: 24px;
+  }
 
 </style>
