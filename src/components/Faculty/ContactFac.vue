@@ -32,7 +32,7 @@
                 <div class=" off-canvas-content">
                         <md-field class="Contact">
                         <label>Message</label>
-                        <md-textarea v-model="textarea" md-counter="500"></md-textarea>
+                        <md-textarea v-model="textarea" maxlength="500" md-counter="500"></md-textarea>
                         </md-field>
                         <md-button class="md-primary">Send</md-button>
 
