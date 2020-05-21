@@ -14,43 +14,42 @@
               <span class="input-group-label">
                 <i class="fa fa-envelope"></i>
               </span>
-                <input class="input-group-field" type="email" placeholder="Email">
+                <input class="input-group-field" name="email" type="email" placeholder="Email" v-model="input.email">
             </div>
 
             <div class="input-group">
               <span class="input-group-label">
                 <i class="fa fa-key"></i>
               </span>
-                <input class="input-group-field" type="password" placeholder="Password">
+                <input class="input-group-field" name="password" type="password" placeholder="Password" v-model="input.password">
             </div>
 
-            <router-link to="/Faculty/Events"><button class="button expanded">Login</button></router-link>
-            <vue-recaptcha sitekey="6LdVl8sUAAAAAANB6ln8rmx5Rvh8aym05P9IzzGg"></vue-recaptcha>
+            <button class="button expanded" v-on:click="login()">Login</button>
 
             <p>if you don't have an account, <b><router-link to="/Register">Register</router-link></b></p>
         </div>
-        <div data-closable class="alert-box callout alert">
+        <div data-closable class="alert-box callout alert" v-if="notMatch">
             <i class="fa fa-ban"></i> Email or Password doesn't match. Please try again.
             <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
                 <span aria-hidden="true">&CircleTimes;</span>
             </button>
         </div>
 
-        <div data-closable class="alert-box callout warning">
+        <div data-closable class="alert-box callout warning" v-if="notEnter">
             <i class="fa fa-exclamation-triangle"></i> Please fill in all required fields.
             <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
                 <span aria-hidden="true">&CircleTimes;</span>
             </button>
         </div>
 
-        <div data-closable class="alert-box callout success">
+        <div data-closable class="alert-box callout success" v-if="successful">
             <i class="fa fa-check"></i> File upload successful!
             <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
                 <span aria-hidden="true">&CircleTimes;</span>
             </button>
         </div>
 
-        <div data-closable class="alert-box callout info">
+        <div data-closable class="alert-box callout info" v-if="noEmail">
             <i class="fa fa-eye"></i>This Email haven't account yet
             <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
                 <span aria-hidden="true">&CircleTimes;</span>
@@ -65,15 +64,40 @@
 
 <script>
     import NavHeader from "./NavHeader";
-    import VueRecaptcha from 'vue-recaptcha';
+    import axios from 'axios'
     export default {
         name: "Login",
-        components: {NavHeader, VueRecaptcha},
+        components: {NavHeader},
         data(){
             return{
+                input: {
+                    email:"",
+                    password:""
+                },
+                notMatch:false,
+                notEnter:false,
+                noEmail:false,
+                successful:false
 
             }
 
+        },
+        methods:{
+            login(){
+                if(this.input.email != "" && this.input.password !="" ){
+                    if(this.input.email == "chamod@gmail.com" && this.input.password == "kanishka"){
+                        this.successful = true
+                        this.$router.replace({ name: "Events" });
+                    }
+                    else{
+                        this.notMatch = true
+                    }
+                }
+                else {
+                    this.notEnter = true
+                    this.notMatch = false
+                }
+            },
         }
 
     }
