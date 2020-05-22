@@ -16,7 +16,7 @@
                         <div class="mb-3">
                             <label for="Location">Notice Title</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="location" placeholder="Title" required>
+                                <input type="text" class="form-control" id="location" placeholder="Title" required v-model="noteData.title">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Title is required.
                                 </div>
@@ -25,7 +25,7 @@
                         <div class="mb-3">
                             <label for="Location">Notice Sub Title</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="location" placeholder="Subtitle" required>
+                                <input type="text" class="form-control" id="location" placeholder="Subtitle" required v-model="noteData.subtitle">
                             </div>
                         </div>
 
@@ -37,18 +37,14 @@
                                   class="ui-autocomplete-input"
                                   autocomplete="off" role="textbox"
                                   aria-autocomplete="list"
-                                  aria-haspopup="true"></textarea>
+                                  aria-haspopup="true"
+                                  v-model="noteData.description"></textarea>
                         </div>
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="country">Batch</label>
-                                <select class="custom-select d-block w-100" id="country" required>
-                                    <option value="">All</option>
-                                    <option>19.1</option>
-                                    <option>18.2</option>
-                                    <option>18.1</option>
-                                    <option>17.2</option>
-                                    <option>17.1</option>
+                                <select class="custom-select d-block w-100" id="country" required v-model="selectedBatch">
+                                    <option v-for="batch in batches">{{ batch }}</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select any of choice
@@ -56,11 +52,8 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">Faculty</label>
-                                <select class="custom-select d-block w-100" id="state" required>
-                                    <option value="">All</option>
-                                    <option>Business</option>
-                                    <option>Computing</option>
-                                    <option>Engineering</option>
+                                <select class="custom-select d-block w-100" id="state" required v-model="selectedFaculty">
+                                    <option v-for="faculty in faculties">{{ faculty }}</option>
 
                                 </select>
                                 <div class="invalid-feedback">
@@ -69,12 +62,8 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">Degree</label>
-                                <select class="custom-select d-block w-100" id="state" required>
-                                    <option value="">All</option>
-                                    <option>Plymouth SE</option>
-                                    <option>Dublin MSI</option>
-                                    <option>UGC CS</option>
-
+                                <select class="custom-select d-block w-100" id="state" required v-model="selectedDegree">
+                                    <option v-for="degree in degrees">{{ degree }}</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select one of them
@@ -82,7 +71,7 @@
                             </div>
                         </div>
                         <hr class="mb-4">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Publish Notice</button>
+                        <button class="btn btn-primary btn-lg btn-block" type="submit" v-on:click="submitted()">Publish Notice</button>
                     </form>
                 </div>
             </div>
@@ -100,7 +89,37 @@
     import Footer from "../Footer";
     export default {
         name: "NoticeAdd",
-        components: {Footer, FacultyNavBar}
+        components: {Footer, FacultyNavBar},
+        data(){
+            return{
+                noteData:{
+                    title:"",
+                    subtitle:"",
+                    description:""
+                },
+                 selectedBatch: 'All...',
+                 selectedFaculty: 'All...',
+                 selectedDegree: 'All...',
+                 batches: ['All...','17.1', '17.2', '18.1', '18.2'
+                 , '19.1', '19.2', '20.1'],
+                 faculties: ['All...','Computing', 'Bussiness', 'Engineering'],
+                 degrees: ['All...','Plymouth SE','Dublin MSI','UGC CS'],
+                 isSubmitted: false,
+            }
+        },
+        methods: {
+            submitted() {
+                if(this.noteData.title != ""){
+                this.isSubmitted = true;
+                console.log(this.noteData.title);
+                console.log(this.noteData.subtitle);
+                console.log(this.noteData.description);
+                console.log(this.selectedBatch);
+                console.log(this.selectedFaculty);
+                console.log(this.selectedDegree);
+                }
+            }
+        },
     }
 </script>
 
