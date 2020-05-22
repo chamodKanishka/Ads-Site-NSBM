@@ -43,7 +43,7 @@
                         <h5 class="mb-3">Images</h5>
                         <div id="my-strictly-unique-vue-upload-multiple-image" style="display: flex; justify-content: center;">
                             <vue-upload-multiple-image
-                                    @upload-success="submitted"
+                                    @upload-success="uploadImageSuccess"
                                     @before-remove="beforeRemove"
                                     @edit-image="editImage"
                                     @data-change="dataChange"
@@ -99,13 +99,13 @@
                 console.log('data', formData, index, fileList);
                 }
             },
-            // uploadImageSuccess(formData, index, fileList) {
-            //     console.log('data', formData, index, fileList)
-            //     // // Upload image api
-            //     // axios.post('http://your-url-upload', { data: formData }).then(response => {
-            //     //   console.log(response)
-            //     // })
-            // },
+            uploadImageSuccess() {
+                // console.log('data', formData, index, fileList)
+                // // Upload image api
+                // axios.post('http://your-url-upload', { data: formData }).then(response => {
+                //   console.log(response)
+                // })
+            },
             beforeRemove(index, done, fileList) {
                 console.log('index', index, fileList)
                 var r = confirm("remove image")
