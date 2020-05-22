@@ -16,7 +16,7 @@
                         <div class="mb-3">
                             <label for="Location">Event title</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="location" placeholder="Title" required>
+                                <input type="text" class="form-control" id="location" placeholder="Title" required v-model="eventData.title">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Title is required.
                                 </div>
@@ -25,7 +25,7 @@
                         <div class="mb-3">
                             <label for="Location">Event Subtitle</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="location" placeholder="Subtitle" required>
+                                <input type="text" class="form-control" id="location" placeholder="Subtitle" required v-model="eventData.subtitle">
                             </div>
                         </div>
                         <h4 class="mb-3">Event Description</h4>
@@ -36,21 +36,22 @@
                                   class="ui-autocomplete-input"
                                   autocomplete="off" role="textbox"
                                   aria-autocomplete="list"
-                                  aria-haspopup="true"></textarea>
+                                  aria-haspopup="true"
+                                  v-model="eventData.description"></textarea>
                         </div>
 
                         <h5 class="mb-3">Images</h5>
                         <div id="my-strictly-unique-vue-upload-multiple-image" style="display: flex; justify-content: center;">
                             <vue-upload-multiple-image
-                                    @upload-success="uploadImageSuccess"
+                                    @upload-success="submitted"
                                     @before-remove="beforeRemove"
                                     @edit-image="editImage"
                                     @data-change="dataChange"
-                                    :data-images="images"
+                                    :data-images="eventData.images"
                             ></vue-upload-multiple-image>
                         </div>
                         <hr class="mb-4">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Publish</button>
+                        <button class="btn btn-primary btn-lg btn-block" type="submit" v-on:click="submitted()">Publish</button>
                     </form>
                 </div>
             </div>
@@ -66,11 +67,21 @@
     import FacultyNavBar from './FacultyNavbar'
     import VueUploadMultipleImage from 'vue-upload-multiple-image'
     import Footer from "../Footer";
+    import axios from 'axios'
     export default {
         name: "EventsAdd",
         data () {
             return {
-                images: []
+                images: [],
+                eventData:{
+                    title:"",
+                    subtitle:"",
+                    description:"",
+                    images: [],
+                    
+                    
+                },
+                isSubmitted: false,
             }
         },
         components: {
@@ -79,13 +90,22 @@
             FacultyNavBar
         },
         methods: {
-            uploadImageSuccess(formData, index, fileList) {
-                console.log('data', formData, index, fileList)
-                // Upload image api
-                // axios.post('http://your-url-upload', { data: formData }).then(response => {
-                //   console.log(response)
-                // })
+            submitted(formData, index, fileList) {
+                if(this.eventData.title != "" && this.eventData.subtitle != "" && this.eventData.description != ""){
+                this.isSubmitted = true;
+                console.log(this.eventData.title);
+                console.log(this.eventData.subtitle);
+                console.log(this.eventData.description);
+                console.log('data', formData, index, fileList);
+                }
             },
+            // uploadImageSuccess(formData, index, fileList) {
+            //     console.log('data', formData, index, fileList)
+            //     // // Upload image api
+            //     // axios.post('http://your-url-upload', { data: formData }).then(response => {
+            //     //   console.log(response)
+            //     // })
+            // },
             beforeRemove(index, done, fileList) {
                 console.log('index', index, fileList)
                 var r = confirm("remove image")

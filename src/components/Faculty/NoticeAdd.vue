@@ -109,7 +109,8 @@
         },
         methods: {
             submitted() {
-                if(this.noteData.title != ""){
+                if(this.noteData.title != "" && this.noteData.subtitle != "" 
+                    && this.noteData.description != ""){
                 this.isSubmitted = true;
                 console.log(this.noteData.title);
                 console.log(this.noteData.subtitle);

@@ -38,7 +38,7 @@
 
                         <div class="textwidget">
                             <div class="textwidget">
-                                <p><strong>Official website:</strong><a href="https://www.nsbm.lk" target="_blank">www.nsbm.lk</a></p>
+                                <p><strong>Official website:</strong><a href="https://www.nsbm.ac.lk" target="_blank">www.nsbm.ac.lk</a></p>
                             </div>
                         </div>
                     </div>
