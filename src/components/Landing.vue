@@ -4,7 +4,7 @@
         <div class="hero-full-screen fixed-top">
             <NavHeader/>
             <div class="middle-content-section">
-                <h1>Welcome to NSBM Add Site</h1>
+                <h1>Welcome to Events Site</h1>
                 <router-link to="/Login"><button class="button large">Login</button></router-link>
                 <router-link to="/Register"><button class="button large">Register</button></router-link>
                 <router-link to="/Hostel/Hostels"><button class="button large"><i class="fa fa-users"></i>Visitors</button></router-link>
